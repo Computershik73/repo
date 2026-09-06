@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubadour — репозиторий</title>
+<style>
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --card: #f4f4f4;
+    --text: #0f0f0f;
+    --muted: #606060;
+    --line: #e0e0e0;
+    --accent: #cc0000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f0f0f;
+        --card: #1c1c1c;
+        --text: #f1f1f1;
+        --muted: #aaaaaa;
+        --line: #303030;
+        --accent: #ff4444;
+    }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.wrap { max-width: 680px; margin: 0 auto; }
+
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+
+header img { width: 64px; height: 64px; border-radius: 14px; }
+
+h1 { font-size: 26px; margin: 0 0 2px; }
+
+h2 { font-size: 18px; margin: 0 0 6px; }
+
+.sub { color: var(--muted); font-size: 15px; }
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+}
+
+.url {
+    display: block;
+    margin: 12px 0;
+    padding: 10px 12px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.row { display: flex; flex-wrap: wrap; gap: 10px; }
+
+a.btn {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+a.btn.plain { background: transparent; color: var(--text); border: 1px solid var(--line); }
+
+p { margin: 10px 0; }
+
+.note { color: var(--muted); font-size: 14px; }
+
+footer { color: var(--muted); font-size: 14px; margin-top: 28px; }
+
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+    <img src="CydiaIcon.png" alt="">
+    <div>
+        <h1>Troubadour</h1>
+        <div class="sub">Клиент YouTube для iOS 5.1 и новее</div>
+    </div>
+</header>
+
+<p>Здесь два канала. Стабильный — то, что можно ставить и пользоваться.
+Канал испытаний — сборки по мере правок: они пишут подробный журнал
+и меняются часто.</p>
+
+<div class="card">
+    <h2>Стабильный</h2>
+    <p class="note">Только выпуски. Обновления приходят редко.</p>
+
+    <code class="url" id="stable"></code>
+
+    <div class="row">
+        <a class="btn" id="stable-cydia" href="#">Добавить в Cydia</a>
+        <a class="btn plain" id="stable-sileo" href="#">Добавить в Sileo</a>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Испытания</h2>
+    <p class="note">Отладочные сборки, а вместе с ними и выпуски. Подписавшись
+    сюда, выпуск вы тоже увидите — как только его номер станет старше.</p>
+
+    <code class="url" id="beta"></code>
+
+    <div class="row">
+        <a class="btn" id="beta-cydia" href="#">Добавить в Cydia</a>
+        <a class="btn plain" id="beta-sileo" href="#">Добавить в Sileo</a>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Как перейти с одного канала на другой</h2>
+    <p>Достаточно добавить нужный источник и убрать ненужный. Пакет один
+    и тот же, поэтому переход выглядит обычным обновлением — ни удалять,
+    ни переустанавливать ничего не надо.</p>
+    <p class="note">Если добавлены оба, ставиться будет то, что новее, —
+    как правило, отладочная сборка.</p>
+</div>
+
+<footer>
+    Сборки для <code>iphoneos-arm</code>, нижняя граница — iOS 5.1.
+</footer>
+
+</div>
+
+<script>
+(function () {
+    /**
+     * Адрес задан прямо, а не вычисляется из `location`: страницу
+     * открывают и с диска, где `location.origin` равен `null`, —
+     * и человек уносил бы с собой негодный адрес источника.
+     */
+    var base = 'https://computershik73.github.io/troubadour-repo/';
+
+    var channels = {
+        stable: base,
+        beta: base + 'beta/'
+    };
+
+    for (var name in channels) {
+        var url = channels[name];
+
+        document.getElementById(name).textContent = url;
+
+        /**
+         * Cydia открывает добавление источника через свою страницу
+         * обмена, Sileo — своей схемой. Иначе на устройстве пришлось бы
+         * набирать адрес руками.
+         */
+        document.getElementById(name + '-cydia').href =
+            'cydia://url/https://cydia.saurik.com/api/share#?source=' + url;
+
+        document.getElementById(name + '-sileo').href = 'sileo://source/' + url;
+    }
+})();
+</script>
+
+</body>
+</html>

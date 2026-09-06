@@ -1,0 +1,8 @@
+Origin: Troubadour
+Label: Troubadour
+Suite: stable
+Version: 1.0
+Codename: stable
+Architectures: iphoneos-arm
+Components: main
+Description: Troubadour — клиент YouTube для iOS 5.1 и новее
