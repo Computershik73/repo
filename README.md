@@ -7,13 +7,13 @@
 **Только стабильные версии**
 
 ```
-https://computershik73.github.io/troubadour-repo/
+https://computershik73.github.io/repo/
 ```
 
 **Стабильные и беты**
 
 ```
-https://computershik73.github.io/troubadour-repo/beta/
+https://computershik73.github.io/repo/beta/
 ```
 
 Во втором лежат и стабильные версии тоже, так что добавлять оба сразу

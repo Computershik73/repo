@@ -1,0 +1,43 @@
+# Значок источника — сам за аватаркой владельца.
+#
+# Раз в сутки и по нажатию. Сменили аватарку на GitHub — назавтра её
+# увидят Cydia и Sileo: они берут значок файлом `CydiaIcon.png` из корня
+# источника, ссылку туда подставить нельзя.
+name: Значок источника
+
+on:
+  schedule:
+    # 04:17 UTC — время выбрано нарочно нечётким: ровный час у GitHub
+    # самый занятой, и задание в нём подолгу ждёт очереди.
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  icon:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Подготовить Pillow
+        run: python3 -m pip install --quiet --upgrade Pillow
+
+      - name: Забрать аватарку
+        run: python3 tools/fetch_icon.py "${{ github.repository_owner }}"
+
+      - name: Положить, если изменилась
+        run: |
+          if git diff --quiet -- CydiaIcon.png beta/CydiaIcon.png; then
+            echo "Значок прежний — коммита не будет"
+            exit 0
+          fi
+
+          git config user.name "Ilya Vysotsky"
+          git config user.email "il.mohoff2016@yandex.com"
+
+          git add CydiaIcon.png beta/CydiaIcon.png
+          git commit -m "Значок источника: аватарка с GitHub"
+          git push
