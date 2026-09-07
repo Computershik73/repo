@@ -1,3 +1,19 @@
+Package: ru.computershik.cydiaqr
+Name: CydiaQR
+Description: Добавление репозиториев в Cydia по QR-коду (iOS 5+, armv7/arm64)
+Maintainer: Computershik
+Author: Computershik
+Section: Tweaks
+Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Architecture: iphoneos-arm
+Version: 1.1.0
+Installed-Size: 464
+Filename: debs/ru.computershik.cydiaqr_1.1.0_iphoneos-arm.deb
+Size: 93230
+MD5sum: f18ce4e3f04c32839b6d87f94b7facd1
+SHA1: bd557fc29700803f5f2e8194b57f2fb7708031f1
+SHA256: c4f557ed566df3ccc4b2c8b5aafd0c3cfb917466acade920e2856f80fe2072dc
+
 Package: ru.computershik.troubadour
 Name: Troubadour
 Description: Клиент YouTube для iOS 5.1 и новее
