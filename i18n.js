@@ -14,8 +14,7 @@
 
 'ru': {
     'title_index': 'Источник Computershik73 для Cydia и Sileo',
-    'sub_index': 'Общий источник моих проектов для Cydia и Sileo',
-    'intro1': 'Это источник не одной программы, а всех моих проектов для iOS. Сейчас в нём <b>Troubadour</b> — клиент YouTube для iOS 5.1 и новее. Следующие появятся здесь же: добавлять ещё один адрес не придётся.',
+    'intro1': 'Приложения от Computershik для iOS.',
     'intro2': 'Каналов два. Стабильный — то, чем можно пользоваться. Канал испытаний — сборки по мере правок: они пишут подробный журнал и меняются часто.',
     'stable_h': 'Стабильный',
     'stable_note': 'Только выпуски. Обновления приходят редко.',
@@ -57,8 +56,7 @@
 
 'en': {
     'title_index': 'Computershik73 source for Cydia and Sileo',
-    'sub_index': 'One source for all my projects, for Cydia and Sileo',
-    'intro1': 'This source is not for a single app but for all my iOS projects. Right now it holds <b>Troubadour</b>, a YouTube client for iOS 5.1 and later. The next ones will show up here too — no second address to add.',
+    'intro1': 'Apps by Computershik for iOS.',
     'intro2': 'There are two channels. Stable is the one to install and use. Testing carries builds made as fixes land: they write a detailed log and change often.',
     'stable_h': 'Stable',
     'stable_note': 'Releases only. Updates come rarely.',
@@ -100,8 +98,7 @@
 
 'es': {
     'title_index': 'Repositorio de Computershik73 para Cydia y Sileo',
-    'sub_index': 'Un repositorio con todos mis proyectos, para Cydia y Sileo',
-    'intro1': 'Este repositorio no es de una sola aplicación, sino de todos mis proyectos para iOS. Ahora contiene <b>Troubadour</b>, un cliente de YouTube para iOS 5.1 y posterior. Los siguientes aparecerán aquí mismo: no habrá que añadir otra dirección.',
+    'intro1': 'Aplicaciones de Computershik para iOS.',
     'intro2': 'Hay dos canales. El estable es el que se instala y se usa. El de pruebas trae compilaciones según se hacen los cambios: guardan un registro detallado y cambian a menudo.',
     'stable_h': 'Estable',
     'stable_note': 'Solo versiones finales. Se actualiza pocas veces.',
@@ -143,8 +140,7 @@
 
 'de': {
     'title_index': 'Quelle von Computershik73 für Cydia und Sileo',
-    'sub_index': 'Eine Quelle für alle meine Projekte – für Cydia und Sileo',
-    'intro1': 'Diese Quelle gehört nicht zu einer einzelnen App, sondern zu allen meinen iOS-Projekten. Derzeit liegt hier <b>Troubadour</b> – ein YouTube-Client für iOS 5.1 und neuer. Weitere kommen an dieselbe Stelle; eine zweite Adresse braucht es nicht.',
+    'intro1': 'Programme von Computershik für iOS.',
     'intro2': 'Es gibt zwei Kanäle. Der stabile ist zum Benutzen. Der Testkanal bringt Builds, sobald etwas geändert wurde: Sie schreiben ein ausführliches Protokoll und wechseln häufig.',
     'stable_h': 'Stabil',
     'stable_note': 'Nur Veröffentlichungen. Updates kommen selten.',
@@ -186,8 +182,7 @@
 
 'pt-br': {
     'title_index': 'Repositório do Computershik73 para Cydia e Sileo',
-    'sub_index': 'Um repositório com todos os meus projetos, para Cydia e Sileo',
-    'intro1': 'Este repositório não é de um app só, mas de todos os meus projetos para iOS. No momento ele traz o <b>Troubadour</b>, um cliente do YouTube para iOS 5.1 ou mais recente. Os próximos vão aparecer aqui mesmo: não será preciso adicionar outro endereço.',
+    'intro1': 'Aplicativos de Computershik para iOS.',
     'intro2': 'São dois canais. O estável é o que se instala e usa. O de testes traz versões conforme as correções saem: elas gravam um registro detalhado e mudam com frequência.',
     'stable_h': 'Estável',
     'stable_note': 'Apenas versões finais. As atualizações são raras.',
@@ -229,8 +224,7 @@
 
 'uk': {
     'title_index': 'Джерело Computershik73 для Cydia і Sileo',
-    'sub_index': 'Спільне джерело моїх проєктів для Cydia і Sileo',
-    'intro1': 'Це джерело не однієї програми, а всіх моїх проєктів для iOS. Зараз у ньому <b>Troubadour</b> — клієнт YouTube для iOS 5.1 і новіших. Наступні з’являться тут само: додавати ще одну адресу не доведеться.',
+    'intro1': 'Програми від Computershik для iOS.',
     'intro2': 'Каналів два. Стабільний — те, чим можна користуватися. Канал випробувань — збірки в міру виправлень: вони пишуть докладний журнал і змінюються часто.',
     'stable_h': 'Стабільний',
     'stable_note': 'Лише випуски. Оновлення приходять рідко.',
@@ -272,8 +266,7 @@
 
 'be': {
     'title_index': 'Крыніца Computershik73 для Cydia і Sileo',
-    'sub_index': 'Агульная крыніца маіх праектаў для Cydia і Sileo',
-    'intro1': 'Гэта крыніца не адной праграмы, а ўсіх маіх праектаў для iOS. Цяпер у ёй <b>Troubadour</b> — кліент YouTube для iOS 5.1 і навейшых. Наступныя з’явяцца тут жа: дадаваць яшчэ адзін адрас не спатрэбіцца.',
+    'intro1': 'Праграмы ад Computershik для iOS.',
     'intro2': 'Каналаў два. Стабільны — тое, чым можна карыстацца. Канал выпрабаванняў — зборкі па меры правак: яны пішуць падрабязны журнал і мяняюцца часта.',
     'stable_h': 'Стабільны',
     'stable_note': 'Толькі выпускі. Абнаўленні прыходзяць рэдка.',
@@ -315,8 +308,7 @@
 
 'kk': {
     'title_index': 'Cydia мен Sileo үшін Computershik73 дереккөзі',
-    'sub_index': 'Cydia мен Sileo үшін жобаларымның ортақ дереккөзі',
-    'intro1': 'Бұл — бір ғана бағдарламаның емес, iOS-қа арналған барлық жобаларымның дереккөзі. Қазір мұнда <b>Troubadour</b> — iOS 5.1 және одан жаңа нұсқаларға арналған YouTube клиенті. Келесілері де осында пайда болады: басқа мекенжай қосудың қажеті жоқ.',
+    'intro1': 'iOS үшін Computershik қолданбалары.',
     'intro2': 'Арна екеу. Тұрақтысы — күнделікті қолдануға арналған. Сынақ арнасы — түзетулер шыққан сайын жиналатын нұсқалар: олар егжей-тегжейлі журнал жазады және жиі жаңарады.',
     'stable_h': 'Тұрақты',
     'stable_note': 'Тек шыққан нұсқалар. Жаңартулар сирек келеді.',
@@ -358,8 +350,7 @@
 
 'zh': {
     'title_index': 'Computershik73 的 Cydia 与 Sileo 软件源',
-    'sub_index': '我的所有项目的统一软件源，适用于 Cydia 和 Sileo',
-    'intro1': '这里不是单个应用的源，而是我全部 iOS 项目的源。目前提供 <b>Troubadour</b>——面向 iOS 5.1 及以上的 YouTube 客户端。以后的项目也会放在这里，无需再添加别的地址。',
+    'intro1': 'Computershik 的 iOS 应用。',
     'intro2': '共有两个通道。稳定通道用于日常使用；测试通道随着修改不断发布，会记录详细日志，更新频繁。',
     'stable_h': '稳定通道',
     'stable_note': '只有正式版本，更新不频繁。',
@@ -401,8 +392,7 @@
 
 'ja': {
     'title_index': 'Computershik73 のリポジトリ（Cydia / Sileo）',
-    'sub_index': '私のプロジェクトをまとめたリポジトリ（Cydia / Sileo 用）',
-    'intro1': 'これは一つのアプリだけの配布元ではなく、私の iOS プロジェクト全体の配布元です。今は <b>Troubadour</b>（iOS 5.1 以降向けの YouTube クライアント）が入っています。今後のものも同じ場所に並ぶので、別のアドレスを追加する必要はありません。',
+    'intro1': 'Computershik の iOS 向けアプリ。',
     'intro2': 'チャンネルは二つあります。安定版はふだん使うためのもの。試験版は修正のたびに出るビルドで、詳しいログを書き、頻繁に変わります。',
     'stable_h': '安定版',
     'stable_note': 'リリース版のみ。更新はまれです。',
