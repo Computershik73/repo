@@ -43,21 +43,21 @@ import tarfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ORIGIN = "Troubadour"
+ORIGIN = "Computershik73"
 MAINTAINER = "computershik"
 
 CHANNELS = [
     {
         "path": "",
-        "label": "Troubadour",
+        "label": "Computershik73",
         "suite": "stable",
-        "description": "Troubadour — клиент YouTube для iOS 5.1 и новее",
+        "description": "Проекты Computershik73 для iOS 5.1 и новее",
     },
     {
         "path": "beta",
-        "label": "Troubadour (испытания)",
+        "label": "Computershik73 (испытания)",
         "suite": "beta",
-        "description": "Troubadour — отладочные сборки; тут же лежат и выпуски",
+        "description": "Проекты Computershik73 — отладочные сборки; тут же лежат и выпуски",
     },
 ]
 

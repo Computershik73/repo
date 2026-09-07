@@ -3,133 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Troubadour — репозиторий</title>
+<title>Источник Computershik73 для Cydia и Sileo</title>
+<!--
+    Вёрстка нарочно старая.
+
+    Страницу открывают с того же устройства, на которое ставят пакет,
+    а это iOS 5 и её Safari. Он не знает ни переменных CSS, ни флексов,
+    ни `gap`, ни `prefers-color-scheme`. Здесь ничего этого и нет: цвета
+    числами, отступы в точках, обтекание и `inline-block` — всё родом
+    из того же времени, что и само устройство.
+
+    Тёмная тема идёт отдельным блоком в конце: старый браузер условия
+    не понимает и просто пропускает его, оставаясь на светлой.
+-->
 <style>
-:root {
-    color-scheme: light dark;
-    --bg: #ffffff;
-    --card: #f4f4f4;
-    --text: #0f0f0f;
-    --muted: #606060;
-    --line: #e0e0e0;
-    --accent: #cc0000;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #0f0f0f;
-        --card: #1c1c1c;
-        --text: #f1f1f1;
-        --muted: #aaaaaa;
-        --line: #303030;
-        --accent: #ff4444;
-    }
-}
-
-* { box-sizing: border-box; }
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body {
     margin: 0;
-    padding: 32px 20px 64px;
-    background: var(--bg);
-    color: var(--text);
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 28px 16px 56px;
+    background: #ffffff;
+    color: #0f0f0f;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
 }
 
 .wrap { max-width: 680px; margin: 0 auto; }
 
-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.head { margin-bottom: 24px; }
 
-header img { width: 64px; height: 64px; border-radius: 14px; }
+.head:after { content: ""; display: block; clear: both; }
 
-h1 { font-size: 26px; margin: 0 0 2px; }
+.head img {
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+}
 
-h2 { font-size: 18px; margin: 0 0 6px; }
+.head .who { overflow: hidden; }
 
-.sub { color: var(--muted); font-size: 15px; }
+h1 { font-size: 24px; line-height: 1.2; margin: 2px 0 4px; }
+
+h2 { font-size: 17px; margin: 0 0 6px; }
+
+.sub { color: #606060; font-size: 15px; }
+
+p { margin: 10px 0; }
 
 .card {
-    background: var(--card);
-    border: 1px solid var(--line);
+    background: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    -webkit-border-radius: 12px;
     border-radius: 12px;
-    padding: 18px 20px;
-    margin-bottom: 18px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
 }
 
 .url {
     display: block;
     margin: 12px 0;
     padding: 10px 12px;
-    background: var(--bg);
-    border: 1px solid var(--line);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 14px;
-    word-break: break-all;
+    font-family: Menlo, Courier, monospace;
+    font-size: 13px;
+    word-wrap: break-word;
 }
 
-.row { display: flex; flex-wrap: wrap; gap: 10px; }
+a { color: #cc0000; }
 
 a.btn {
     display: inline-block;
+    margin: 4px 8px 4px 0;
     padding: 9px 16px;
+    -webkit-border-radius: 8px;
     border-radius: 8px;
-    background: var(--accent);
-    color: #fff;
+    background: #cc0000;
+    color: #ffffff;
     text-decoration: none;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-a.btn.plain { background: transparent; color: var(--text); border: 1px solid var(--line); }
+a.btn.plain {
+    background: transparent;
+    color: #0f0f0f;
+    border: 1px solid #c8c8c8;
+}
 
-p { margin: 10px 0; }
+.note { color: #606060; font-size: 14px; }
 
-.note { color: var(--muted); font-size: 14px; }
+ul.links { margin: 10px 0 0; padding: 0 0 0 18px; }
 
-footer { color: var(--muted); font-size: 14px; margin-top: 28px; }
+ul.links li { margin: 6px 0; }
 
-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; }
+footer { color: #606060; font-size: 14px; margin-top: 26px; }
+
+code { font-family: Menlo, Courier, monospace; font-size: 14px; }
+
+@media (prefers-color-scheme: dark) {
+    body { background: #0f0f0f; color: #f1f1f1; }
+    .sub, .note, footer { color: #aaaaaa; }
+    .card { background: #1c1c1c; border-color: #303030; }
+    .url { background: #0f0f0f; border-color: #303030; }
+    a { color: #ff4444; }
+    a.btn { background: #cc0000; color: #ffffff; }
+    a.btn.plain { color: #f1f1f1; border-color: #3a3a3a; }
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-    <img src="https://github.com/Computershik73.png?size=128" alt="">
-    <div>
-        <h1>Troubadour</h1>
-        <div class="sub">Клиент YouTube для iOS 5.1 и новее</div>
+<div class="head">
+    <img src="CydiaIcon.png" alt="">
+    <div class="who">
+        <h1>Computershik73</h1>
+        <div class="sub">Общий источник моих проектов для Cydia и Sileo</div>
     </div>
-</header>
+</div>
 
-<p>Здесь два канала. Стабильный — то, что можно ставить и пользоваться.
-Канал испытаний — сборки по мере правок: они пишут подробный журнал
+<p>Это источник не одной программы, а всех моих проектов для iOS.
+Сейчас в нём <b>Troubadour</b> — клиент YouTube для iOS 5.1 и новее.
+Следующие появятся здесь же: добавлять ещё один адрес не придётся.</p>
+
+<p>Каналов два. Стабильный — то, чем можно пользоваться. Канал
+испытаний — сборки по мере правок: они пишут подробный журнал
 и меняются часто.</p>
 
 <div class="card">
     <h2>Стабильный</h2>
     <p class="note">Только выпуски. Обновления приходят редко.</p>
 
-    <code class="url" id="stable"></code>
+    <code class="url">https://computershik73.github.io/repo/</code>
 
-    <div class="row">
-        <a class="btn" id="stable-cydia" href="#">Добавить в Cydia</a>
-        <a class="btn plain" id="stable-sileo" href="#">Добавить в Sileo</a>
-    </div>
+    <p>
+        <a class="btn" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/">Добавить в Cydia</a>
+        <a class="btn plain" href="sileo://source/https://computershik73.github.io/repo/">Добавить в Sileo</a>
+    </p>
 </div>
 
 <div class="card">
     <h2>Испытания</h2>
-    <p class="note">Отладочные сборки, а вместе с ними и выпуски. Подписавшись
-    сюда, выпуск вы тоже увидите — как только его номер станет старше.</p>
+    <p class="note">Отладочные сборки, а вместе с ними и выпуски.
+    Подписавшись сюда, выпуск вы тоже увидите — как только его номер
+    станет старше.</p>
 
-    <code class="url" id="beta"></code>
+    <code class="url">https://computershik73.github.io/repo/beta/</code>
 
-    <div class="row">
-        <a class="btn" id="beta-cydia" href="#">Добавить в Cydia</a>
-        <a class="btn plain" id="beta-sileo" href="#">Добавить в Sileo</a>
-    </div>
+    <p>
+        <a class="btn" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/beta/">Добавить в Cydia</a>
+        <a class="btn plain" href="sileo://source/https://computershik73.github.io/repo/beta/">Добавить в Sileo</a>
+    </p>
 </div>
 
 <div class="card">
@@ -141,43 +173,22 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1
     как правило, отладочная сборка.</p>
 </div>
 
+<div class="card">
+    <h2>Автор</h2>
+    <p class="note">Новости о сборках, вопросы и замечания — там же,
+    где и всегда.</p>
+
+    <ul class="links">
+        <li><a href="https://4pda.to/forum/index.php?showuser=4458524">Страница на 4PDA</a></li>
+        <li><a href="https://t.me/cmplog">Telegram-канал</a></li>
+        <li><a href="https://pay.cloudtips.ru/p/83821e32">Поддержать финансово</a></li>
+    </ul>
+</div>
+
 <footer>
     Сборки для <code>iphoneos-arm</code>, нижняя граница — iOS 5.1.
 </footer>
 
 </div>
-
-<script>
-(function () {
-    /**
-     * Адрес задан прямо, а не вычисляется из `location`: страницу
-     * открывают и с диска, где `location.origin` равен `null`, —
-     * и человек уносил бы с собой негодный адрес источника.
-     */
-    var base = 'https://computershik73.github.io/repo/';
-
-    var channels = {
-        stable: base,
-        beta: base + 'beta/'
-    };
-
-    for (var name in channels) {
-        var url = channels[name];
-
-        document.getElementById(name).textContent = url;
-
-        /**
-         * Cydia открывает добавление источника через свою страницу
-         * обмена, Sileo — своей схемой. Иначе на устройстве пришлось бы
-         * набирать адрес руками.
-         */
-        document.getElementById(name + '-cydia').href =
-            'cydia://url/https://cydia.saurik.com/api/share#?source=' + url;
-
-        document.getElementById(name + '-sileo').href = 'sileo://source/' + url;
-    }
-})();
-</script>
-
 </body>
 </html>

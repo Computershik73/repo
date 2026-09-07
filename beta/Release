@@ -1,8 +1,8 @@
-Origin: Troubadour
-Label: Troubadour (испытания)
+Origin: Computershik73
+Label: Computershik73 (испытания)
 Suite: beta
 Version: 1.0
 Codename: beta
 Architectures: iphoneos-arm
 Components: main
-Description: Troubadour — отладочные сборки; тут же лежат и выпуски
+Description: Проекты Computershik73 — отладочные сборки; тут же лежат и выпуски
