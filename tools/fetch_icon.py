@@ -52,6 +52,27 @@ def owner_from_git():
     return found.group(1) if found else None
 
 
+def same_picture(path, fresh):
+    """
+    Та же ли это картинка — по точкам, а не по файлу.
+
+    Сравнивать сами файлы нельзя: PNG пожимается по-разному в разных
+    сборках Pillow, и один и тот же снимок с моей машины и с машины
+    GitHub даёт разные байты. Ночной заход считал бы аватарку новой
+    каждый раз и складывал в историю по коммиту в сутки.
+    """
+    if not os.path.exists(path):
+        return False
+
+    try:
+        with Image.open(path) as old:
+            old = old.convert("RGBA")
+
+            return old.size == fresh.size and old.tobytes() == fresh.tobytes()
+    except Exception:
+        return False
+
+
 def main():
     owner = sys.argv[1] if len(sys.argv) > 1 else owner_from_git()
 
@@ -87,13 +108,7 @@ def main():
     for name in TARGETS:
         path = os.path.join(ROOT, name)
 
-        old = None
-
-        if os.path.exists(path):
-            with open(path, "rb") as file:
-                old = file.read()
-
-        if old == data:
+        if same_picture(path, picture):
             continue
 
         with open(path, "wb") as file:
