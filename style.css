@@ -49,6 +49,8 @@ h2 { font-size: 17px; margin: 0 0 6px; }
 
 p { margin: 10px 0; }
 
+.card:after { content: ""; display: block; clear: both; }
+
 .card {
     background: #f4f4f4;
     border: 1px solid #e0e0e0;
@@ -60,6 +62,7 @@ p { margin: 10px 0; }
 
 .url {
     display: block;
+    overflow: hidden;
     margin: 12px 0;
     padding: 10px 12px;
     background: #ffffff;
@@ -101,6 +104,18 @@ ul.links li { margin: 6px 0; }
 footer { color: #606060; font-size: 14px; margin-top: 26px; }
 
 code { font-family: Menlo, Courier, monospace; font-size: 14px; }
+
+/* Значок с адресом канала — рядом со ссылкой, справа. */
+
+.qr {
+    float: right;
+    width: 108px;
+    height: 108px;
+    margin: 0 0 10px 14px;
+    background: #ffffff;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
 
 /* Сетка приложений: значок, название, номер выпуска. */
 

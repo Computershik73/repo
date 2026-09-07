@@ -48,6 +48,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORIGIN = "Computershik73"
 MAINTAINER = "computershik"
 
+# Адрес источника в сети — по нему и рисуется QR у каждого канала.
+SITE = "https://computershik73.github.io/repo/"
+
 CHANNELS = [
     {
         "path": "",
@@ -493,6 +496,51 @@ def collect(channel_base):
     return found
 
 
+def write_qr(channel_base, url):
+    """
+    Значок с адресом канала — чтобы завести источник на телефоне,
+    не набирая адрес руками.
+
+    Рисуется здесь, а не на странице: собирать QR в браузере значило бы
+    тащить с собой библиотеку, а Safari из iOS 5 — не то место, где
+    стоит это делать. Картинка же лежит готовой и весит пару килобайт.
+
+    Файл переписывается только при изменении: иначе каждая пересборка
+    роняла бы в git новый снимок того же самого.
+    """
+    try:
+        import segno
+    except ImportError:
+        print("segno не установлен — QR не рисую (pip install segno)")
+
+        return False
+
+    target = os.path.join(channel_base, "qr.png")
+
+    kept = io.BytesIO()
+
+    # Шесть точек на модуль: на экране картинка стоит вдвое мельче,
+    # так она остаётся резкой и на плотных экранах.
+    segno.make(url, error="m").save(kept, kind="png", scale=6, border=2)
+
+    data = kept.getvalue()
+
+    old = None
+
+    if os.path.exists(target):
+        with open(target, "rb") as handle:
+            old = handle.read()
+
+    if old == data:
+        return False
+
+    with open(target, "wb") as handle:
+        handle.write(data)
+
+    print("QR перерисован: %s" % url)
+
+    return True
+
 def write_icons(channel_base, packages):
     """Значок каждого пакета — рядом со страницами, в `icons/`."""
     folder = os.path.join(channel_base, "icons")
@@ -703,6 +751,8 @@ def main():
 
         packages = collect(base)
         icons = write_icons(base, packages)
+
+        write_qr(base, SITE + (channel["path"] + "/" if channel["path"] else ""))
 
         shown = write_pages(channel, packages, icons)
 

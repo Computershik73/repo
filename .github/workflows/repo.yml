@@ -33,6 +33,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Подготовить segno
+        run: python3 -m pip install --quiet --upgrade segno
+
       - name: Собрать
         run: python3 tools/build_repo.py
 
