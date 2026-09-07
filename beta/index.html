@@ -101,6 +101,22 @@ footer { color: #606060; font-size: 14px; margin-top: 26px; }
 
 code { font-family: Menlo, Courier, monospace; font-size: 14px; }
 
+.langs { margin-top: 22px; font-size: 14px; }
+
+.langs a {
+    display: inline-block;
+    margin: 0 14px 6px 0;
+    color: #606060;
+    text-decoration: none;
+    border-bottom: 1px dotted #c0c0c0;
+}
+
+.langs a.here {
+    color: #0f0f0f;
+    font-weight: bold;
+    border-bottom-color: transparent;
+}
+
 @media (prefers-color-scheme: dark) {
     body { background: #0f0f0f; color: #f1f1f1; }
     .sub, .note, footer { color: #aaaaaa; }
@@ -109,54 +125,71 @@ code { font-family: Menlo, Courier, monospace; font-size: 14px; }
     a { color: #ff4444; }
     a.btn { background: #cc0000; color: #ffffff; }
     a.btn.plain { color: #f1f1f1; border-color: #3a3a3a; }
+    .langs a { color: #aaaaaa; border-bottom-color: #3a3a3a; }
+    .langs a.here { color: #f1f1f1; border-bottom-color: transparent; }
 }
 </style>
 </head>
-<body>
+<body data-i18n-title="title_beta">
 <div class="wrap">
 
 <div class="head">
     <img src="CydiaIcon.png" alt="">
     <div class="who">
-        <h1>Computershik73 — испытания</h1>
-        <div class="sub">Отладочные сборки моих проектов</div>
+        <h1 data-i18n="h1_beta">Computershik73 — испытания</h1>
+        <div class="sub" data-i18n="sub_beta">Отладочные сборки моих проектов</div>
     </div>
 </div>
 
-<p>Это канал испытаний общего источника моих проектов для iOS. Сборки
+<p data-i18n="intro_beta">Это канал испытаний общего источника моих проектов для iOS. Сборки
 здесь выходят по мере правок, пишут подробный журнал и меняются часто.
 Выпуски лежат тут же, так что второй источник добавлять незачем.</p>
 
 <div class="card">
-    <h2>Адрес</h2>
+    <h2 data-i18n="addr_h">Адрес</h2>
 
     <code class="url">https://computershik73.github.io/repo/beta/</code>
 
     <p>
-        <a class="btn" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/beta/">Добавить в Cydia</a>
-        <a class="btn plain" href="sileo://source/https://computershik73.github.io/repo/beta/">Добавить в Sileo</a>
+        <a class="btn" data-i18n="btn_cydia" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/beta/">Добавить в Cydia</a>
+        <a class="btn plain" data-i18n="btn_sileo" href="sileo://source/https://computershik73.github.io/repo/beta/">Добавить в Sileo</a>
     </p>
 
-    <p class="note">Нужны только выпуски — возьмите
+    <p class="note" data-i18n="beta_back">Нужны только выпуски — возьмите
     <a href="../">стабильный канал</a>.</p>
 </div>
 
 <div class="card">
-    <h2>Автор</h2>
-    <p class="note">Новости о сборках, вопросы и замечания — там же,
+    <h2 data-i18n="author_h">Автор</h2>
+    <p class="note" data-i18n="author_note">Новости о сборках, вопросы и замечания — там же,
     где и всегда.</p>
 
     <ul class="links">
-        <li><a href="https://4pda.to/forum/index.php?showuser=4458524">Страница на 4PDA</a></li>
-        <li><a href="https://t.me/cmplog">Telegram-канал</a></li>
-        <li><a href="https://pay.cloudtips.ru/p/83821e32">Поддержать финансово</a></li>
+        <li><a href="https://4pda.to/forum/index.php?showuser=4458524" data-i18n="link_4pda">Страница на 4PDA</a></li>
+        <li><a href="https://t.me/cmplog" data-i18n="link_tg">Telegram-канал</a></li>
+        <li><a href="https://pay.cloudtips.ru/p/83821e32" data-i18n="link_donate">Поддержать финансово</a></li>
     </ul>
 </div>
 
-<footer>
+<footer data-i18n="footer">
     Сборки для <code>iphoneos-arm</code>, нижняя граница — iOS 5.1.
 </footer>
 
+<div class="langs">
+    <a href="?lang=ru" data-lang="ru" class="lang">Русский</a>
+    <a href="?lang=en" data-lang="en" class="lang">English</a>
+    <a href="?lang=es" data-lang="es" class="lang">Español</a>
+    <a href="?lang=de" data-lang="de" class="lang">Deutsch</a>
+    <a href="?lang=pt-br" data-lang="pt-br" class="lang">Português (BR)</a>
+    <a href="?lang=uk" data-lang="uk" class="lang">Українська</a>
+    <a href="?lang=be" data-lang="be" class="lang">Беларуская</a>
+    <a href="?lang=kk" data-lang="kk" class="lang">Қазақша</a>
+    <a href="?lang=zh" data-lang="zh" class="lang">中文</a>
+    <a href="?lang=ja" data-lang="ja" class="lang">日本語</a>
 </div>
+
+</div>
+
+<script src="../i18n.js"></script>
 </body>
 </html>

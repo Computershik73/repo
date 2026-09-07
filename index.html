@@ -108,6 +108,22 @@ footer { color: #606060; font-size: 14px; margin-top: 26px; }
 
 code { font-family: Menlo, Courier, monospace; font-size: 14px; }
 
+.langs { margin-top: 22px; font-size: 14px; }
+
+.langs a {
+    display: inline-block;
+    margin: 0 14px 6px 0;
+    color: #606060;
+    text-decoration: none;
+    border-bottom: 1px dotted #c0c0c0;
+}
+
+.langs a.here {
+    color: #0f0f0f;
+    font-weight: bold;
+    border-bottom-color: transparent;
+}
+
 @media (prefers-color-scheme: dark) {
     body { background: #0f0f0f; color: #f1f1f1; }
     .sub, .note, footer { color: #aaaaaa; }
@@ -116,79 +132,96 @@ code { font-family: Menlo, Courier, monospace; font-size: 14px; }
     a { color: #ff4444; }
     a.btn { background: #cc0000; color: #ffffff; }
     a.btn.plain { color: #f1f1f1; border-color: #3a3a3a; }
+    .langs a { color: #aaaaaa; border-bottom-color: #3a3a3a; }
+    .langs a.here { color: #f1f1f1; border-bottom-color: transparent; }
 }
 </style>
 </head>
-<body>
+<body data-i18n-title="title_index">
 <div class="wrap">
 
 <div class="head">
     <img src="CydiaIcon.png" alt="">
     <div class="who">
         <h1>Computershik73</h1>
-        <div class="sub">Общий источник моих проектов для Cydia и Sileo</div>
+        <div class="sub" data-i18n="sub_index">Общий источник моих проектов для Cydia и Sileo</div>
     </div>
 </div>
 
-<p>Это источник не одной программы, а всех моих проектов для iOS.
+<p data-i18n="intro1">Это источник не одной программы, а всех моих проектов для iOS.
 Сейчас в нём <b>Troubadour</b> — клиент YouTube для iOS 5.1 и новее.
 Следующие появятся здесь же: добавлять ещё один адрес не придётся.</p>
 
-<p>Каналов два. Стабильный — то, чем можно пользоваться. Канал
+<p data-i18n="intro2">Каналов два. Стабильный — то, чем можно пользоваться. Канал
 испытаний — сборки по мере правок: они пишут подробный журнал
 и меняются часто.</p>
 
 <div class="card">
-    <h2>Стабильный</h2>
-    <p class="note">Только выпуски. Обновления приходят редко.</p>
+    <h2 data-i18n="stable_h">Стабильный</h2>
+    <p class="note" data-i18n="stable_note">Только выпуски. Обновления приходят редко.</p>
 
     <code class="url">https://computershik73.github.io/repo/</code>
 
     <p>
-        <a class="btn" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/">Добавить в Cydia</a>
-        <a class="btn plain" href="sileo://source/https://computershik73.github.io/repo/">Добавить в Sileo</a>
+        <a class="btn" data-i18n="btn_cydia" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/">Добавить в Cydia</a>
+        <a class="btn plain" data-i18n="btn_sileo" href="sileo://source/https://computershik73.github.io/repo/">Добавить в Sileo</a>
     </p>
 </div>
 
 <div class="card">
-    <h2>Испытания</h2>
-    <p class="note">Отладочные сборки, а вместе с ними и выпуски.
+    <h2 data-i18n="beta_h">Испытания</h2>
+    <p class="note" data-i18n="beta_note">Отладочные сборки, а вместе с ними и выпуски.
     Подписавшись сюда, выпуск вы тоже увидите — как только его номер
     станет старше.</p>
 
     <code class="url">https://computershik73.github.io/repo/beta/</code>
 
     <p>
-        <a class="btn" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/beta/">Добавить в Cydia</a>
-        <a class="btn plain" href="sileo://source/https://computershik73.github.io/repo/beta/">Добавить в Sileo</a>
+        <a class="btn" data-i18n="btn_cydia" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://computershik73.github.io/repo/beta/">Добавить в Cydia</a>
+        <a class="btn plain" data-i18n="btn_sileo" href="sileo://source/https://computershik73.github.io/repo/beta/">Добавить в Sileo</a>
     </p>
 </div>
 
 <div class="card">
-    <h2>Как перейти с одного канала на другой</h2>
-    <p>Достаточно добавить нужный источник и убрать ненужный. Пакет один
+    <h2 data-i18n="switch_h">Как перейти с одного канала на другой</h2>
+    <p data-i18n="switch_p1">Достаточно добавить нужный источник и убрать ненужный. Пакет один
     и тот же, поэтому переход выглядит обычным обновлением — ни удалять,
     ни переустанавливать ничего не надо.</p>
-    <p class="note">Если добавлены оба, ставиться будет то, что новее, —
+    <p class="note" data-i18n="switch_p2">Если добавлены оба, ставиться будет то, что новее, —
     как правило, отладочная сборка.</p>
 </div>
 
 <div class="card">
-    <h2>Автор</h2>
-    <p class="note">Новости о сборках, вопросы и замечания — там же,
+    <h2 data-i18n="author_h">Автор</h2>
+    <p class="note" data-i18n="author_note">Новости о сборках, вопросы и замечания — там же,
     где и всегда.</p>
 
     <ul class="links">
-        <li><a href="https://4pda.to/forum/index.php?showuser=4458524">Страница на 4PDA</a></li>
-        <li><a href="https://t.me/cmplog">Telegram-канал</a></li>
-        <li><a href="https://pay.cloudtips.ru/p/83821e32">Поддержать финансово</a></li>
+        <li><a href="https://4pda.to/forum/index.php?showuser=4458524" data-i18n="link_4pda">Страница на 4PDA</a></li>
+        <li><a href="https://t.me/cmplog" data-i18n="link_tg">Telegram-канал</a></li>
+        <li><a href="https://pay.cloudtips.ru/p/83821e32" data-i18n="link_donate">Поддержать финансово</a></li>
     </ul>
 </div>
 
-<footer>
+<footer data-i18n="footer">
     Сборки для <code>iphoneos-arm</code>, нижняя граница — iOS 5.1.
 </footer>
 
+<div class="langs">
+    <a href="?lang=ru" data-lang="ru" class="lang">Русский</a>
+    <a href="?lang=en" data-lang="en" class="lang">English</a>
+    <a href="?lang=es" data-lang="es" class="lang">Español</a>
+    <a href="?lang=de" data-lang="de" class="lang">Deutsch</a>
+    <a href="?lang=pt-br" data-lang="pt-br" class="lang">Português (BR)</a>
+    <a href="?lang=uk" data-lang="uk" class="lang">Українська</a>
+    <a href="?lang=be" data-lang="be" class="lang">Беларуская</a>
+    <a href="?lang=kk" data-lang="kk" class="lang">Қазақша</a>
+    <a href="?lang=zh" data-lang="zh" class="lang">中文</a>
+    <a href="?lang=ja" data-lang="ja" class="lang">日本語</a>
 </div>
+
+</div>
+
+<script src="i18n.js"></script>
 </body>
 </html>
