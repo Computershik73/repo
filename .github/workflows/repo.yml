@@ -1,0 +1,50 @@
+# Пересборка источника: указатели, сетка приложений и их страницы.
+#
+# Всё, что видно на страницах, берётся из самих пакетов, поэтому руками
+# после добавления `.deb` делать нечего: положили пакет — сборка сама
+# перепишет `Packages`, значки, сетку и страницу приложения.
+#
+# Ходит по трём поводам: пакет (или сам сборщик) изменился, раз в сутки
+# на всякий случай и по нажатию.
+name: Пересборка источника
+
+on:
+  push:
+    paths:
+      - '**/debs/**'
+      - 'tools/**'
+      - 'i18n.js'
+      - 'style.css'
+      - '.github/workflows/repo.yml'
+  schedule:
+    # 05:23 UTC — вскоре после захода за значком, время нарочно нечётное:
+    # ровный час у GitHub самый занятой.
+    - cron: '23 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Собрать
+        run: python3 tools/build_repo.py
+
+      - name: Положить, если изменилось
+        run: |
+          if git diff --quiet; then
+            echo "Источник и страницы уже в порядке — коммита не будет"
+            exit 0
+          fi
+
+          git config user.name "Computershik73"
+          git config user.email "il.mohoff2016@yandex.ru"
+
+          git add -A
+          git commit -m "Пересборка источника: указатели и страницы приложений"
+          git push

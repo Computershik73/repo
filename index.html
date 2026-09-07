@@ -16,126 +16,7 @@
     Тёмная тема идёт отдельным блоком в конце: старый браузер условия
     не понимает и просто пропускает его, оставаясь на светлой.
 -->
-<style>
-* { -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-body {
-    margin: 0;
-    padding: 28px 16px 56px;
-    background: #ffffff;
-    color: #0f0f0f;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.55;
-    -webkit-text-size-adjust: 100%;
-}
-
-.wrap { max-width: 680px; margin: 0 auto; }
-
-.head { margin-bottom: 24px; }
-
-.head:after { content: ""; display: block; clear: both; }
-
-.head img {
-    float: left;
-    width: 64px;
-    height: 64px;
-    margin-right: 16px;
-    -webkit-border-radius: 14px;
-    border-radius: 14px;
-}
-
-.head .who { overflow: hidden; }
-
-h1 { font-size: 24px; line-height: 1.2; margin: 2px 0 4px; }
-
-h2 { font-size: 17px; margin: 0 0 6px; }
-
-.sub { color: #606060; font-size: 15px; }
-
-p { margin: 10px 0; }
-
-.card {
-    background: #f4f4f4;
-    border: 1px solid #e0e0e0;
-    -webkit-border-radius: 12px;
-    border-radius: 12px;
-    padding: 16px 18px;
-    margin-bottom: 16px;
-}
-
-.url {
-    display: block;
-    margin: 12px 0;
-    padding: 10px 12px;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    font-family: Menlo, Courier, monospace;
-    font-size: 13px;
-    word-wrap: break-word;
-}
-
-a { color: #cc0000; }
-
-a.btn {
-    display: inline-block;
-    margin: 4px 8px 4px 0;
-    padding: 9px 16px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    background: #cc0000;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-a.btn.plain {
-    background: transparent;
-    color: #0f0f0f;
-    border: 1px solid #c8c8c8;
-}
-
-.note { color: #606060; font-size: 14px; }
-
-ul.links { margin: 10px 0 0; padding: 0 0 0 18px; }
-
-ul.links li { margin: 6px 0; }
-
-footer { color: #606060; font-size: 14px; margin-top: 26px; }
-
-code { font-family: Menlo, Courier, monospace; font-size: 14px; }
-
-.langs { margin-top: 22px; font-size: 14px; }
-
-.langs a {
-    display: inline-block;
-    margin: 0 14px 6px 0;
-    color: #606060;
-    text-decoration: none;
-    border-bottom: 1px dotted #c0c0c0;
-}
-
-.langs a.here {
-    color: #0f0f0f;
-    font-weight: bold;
-    border-bottom-color: transparent;
-}
-
-@media (prefers-color-scheme: dark) {
-    body { background: #0f0f0f; color: #f1f1f1; }
-    .sub, .note, footer { color: #aaaaaa; }
-    .card { background: #1c1c1c; border-color: #303030; }
-    .url { background: #0f0f0f; border-color: #303030; }
-    a { color: #ff4444; }
-    a.btn { background: #cc0000; color: #ffffff; }
-    a.btn.plain { color: #f1f1f1; border-color: #3a3a3a; }
-    .langs a { color: #aaaaaa; border-bottom-color: #3a3a3a; }
-    .langs a.here { color: #f1f1f1; border-bottom-color: transparent; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body data-i18n-title="title_index">
 <div class="wrap">
@@ -155,6 +36,16 @@ code { font-family: Menlo, Courier, monospace; font-size: 14px; }
 <p data-i18n="intro2">Каналов два. Стабильный — то, чем можно пользоваться. Канал
 испытаний — сборки по мере правок: они пишут подробный журнал
 и меняются часто.</p>
+
+<div class="card">
+    <h2 data-i18n="apps_h">Приложения</h2>
+    <p class="note" data-i18n="apps_note">Сетка собирается из самого источника: что в нём лежит, то и показано.</p>
+
+<!-- apps:start -->
+<p class="note" data-i18n="apps_empty">Пока пусто: в этом канале ещё нет пакетов.</p>
+<!-- apps:end -->
+</div>
+
 
 <div class="card">
     <h2 data-i18n="stable_h">Стабильный</h2>

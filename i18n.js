@@ -37,7 +37,22 @@
     'sub_beta': 'Отладочные сборки моих проектов',
     'intro_beta': 'Это канал испытаний общего источника моих проектов для iOS. Сборки здесь выходят по мере правок, пишут подробный журнал и меняются часто. Выпуски лежат тут же, так что второй источник добавлять незачем.',
     'addr_h': 'Адрес',
-    'beta_back': 'Нужны только выпуски — возьмите <a href="../">стабильный канал</a>.'
+    'beta_back': 'Нужны только выпуски — возьмите <a href="../">стабильный канал</a>.',
+    'apps_h': 'Приложения',
+    'apps_note': 'Сетка собирается из самого источника: что в нём лежит, то и показано.',
+    'apps_empty': 'Пока пусто: в этом канале ещё нет пакетов.',
+    'app_open_cydia': 'Открыть в Cydia',
+    'app_open_sileo': 'Открыть в Sileo',
+    'app_facts_h': 'Сведения',
+    'app_version': 'Версия',
+    'app_size': 'Размер',
+    'app_author': 'Разработчик',
+    'app_section': 'Раздел',
+    'app_depends': 'Зависимости',
+    'app_id': 'Имя пакета',
+    'app_versions_h': 'Версии в этом канале',
+    'app_versions_note': 'Ставить их вручную обычно не нужно — за этим и нужен источник.',
+    'app_back': 'Назад к источнику'
 },
 
 'en': {
@@ -65,7 +80,22 @@
     'sub_beta': 'Debug builds of my projects',
     'intro_beta': 'This is the testing channel of my shared source for iOS projects. Builds here come out as fixes land, write a detailed log and change often. Releases live here as well, so a second source is not needed.',
     'addr_h': 'Address',
-    'beta_back': 'Want releases only? Take the <a href="../">stable channel</a>.'
+    'beta_back': 'Want releases only? Take the <a href="../">stable channel</a>.',
+    'apps_h': 'Apps',
+    'apps_note': 'The grid is built from the source itself: what is in it is what you see.',
+    'apps_empty': 'Empty for now: this channel has no packages yet.',
+    'app_open_cydia': 'Open in Cydia',
+    'app_open_sileo': 'Open in Sileo',
+    'app_facts_h': 'Details',
+    'app_version': 'Version',
+    'app_size': 'Size',
+    'app_author': 'Developer',
+    'app_section': 'Section',
+    'app_depends': 'Requires',
+    'app_id': 'Package name',
+    'app_versions_h': 'Versions in this channel',
+    'app_versions_note': 'You normally do not need to install these by hand — that is what the source is for.',
+    'app_back': 'Back to the source'
 },
 
 'es': {
@@ -93,7 +123,22 @@
     'sub_beta': 'Compilaciones de depuración de mis proyectos',
     'intro_beta': 'Este es el canal de pruebas de mi repositorio común de proyectos para iOS. Las compilaciones salen según se hacen los cambios, guardan un registro detallado y cambian a menudo. Las versiones finales están aquí también, así que no hace falta añadir otro repositorio.',
     'addr_h': 'Dirección',
-    'beta_back': 'Si solo quieres versiones finales, usa el <a href="../">canal estable</a>.'
+    'beta_back': 'Si solo quieres versiones finales, usa el <a href="../">canal estable</a>.',
+    'apps_h': 'Aplicaciones',
+    'apps_note': 'La cuadrícula se genera del propio repositorio: lo que hay dentro es lo que se ve.',
+    'apps_empty': 'Por ahora vacío: este canal aún no tiene paquetes.',
+    'app_open_cydia': 'Abrir en Cydia',
+    'app_open_sileo': 'Abrir en Sileo',
+    'app_facts_h': 'Detalles',
+    'app_version': 'Versión',
+    'app_size': 'Tamaño',
+    'app_author': 'Desarrollador',
+    'app_section': 'Sección',
+    'app_depends': 'Requisitos',
+    'app_id': 'Nombre del paquete',
+    'app_versions_h': 'Versiones en este canal',
+    'app_versions_note': 'Normalmente no hace falta instalarlas a mano: para eso está el repositorio.',
+    'app_back': 'Volver al repositorio'
 },
 
 'de': {
@@ -121,7 +166,22 @@
     'sub_beta': 'Debug-Builds meiner Projekte',
     'intro_beta': 'Das ist der Testkanal meiner gemeinsamen Quelle für iOS-Projekte. Die Builds erscheinen, sobald etwas geändert wurde, schreiben ein ausführliches Protokoll und wechseln häufig. Veröffentlichungen liegen ebenfalls hier, eine zweite Quelle braucht es also nicht.',
     'addr_h': 'Adresse',
-    'beta_back': 'Nur Veröffentlichungen gewünscht? Dann den <a href="../">stabilen Kanal</a> nehmen.'
+    'beta_back': 'Nur Veröffentlichungen gewünscht? Dann den <a href="../">stabilen Kanal</a> nehmen.',
+    'apps_h': 'Programme',
+    'apps_note': 'Die Übersicht entsteht aus der Quelle selbst: Was darin liegt, steht hier.',
+    'apps_empty': 'Noch leer: In diesem Kanal liegen bisher keine Pakete.',
+    'app_open_cydia': 'In Cydia öffnen',
+    'app_open_sileo': 'In Sileo öffnen',
+    'app_facts_h': 'Angaben',
+    'app_version': 'Version',
+    'app_size': 'Größe',
+    'app_author': 'Entwickler',
+    'app_section': 'Bereich',
+    'app_depends': 'Voraussetzungen',
+    'app_id': 'Paketname',
+    'app_versions_h': 'Versionen in diesem Kanal',
+    'app_versions_note': 'Von Hand installieren muss man sie normalerweise nicht – dafür gibt es die Quelle.',
+    'app_back': 'Zurück zur Quelle'
 },
 
 'pt-br': {
@@ -149,7 +209,22 @@
     'sub_beta': 'Versões de depuração dos meus projetos',
     'intro_beta': 'Este é o canal de testes do meu repositório comum de projetos para iOS. As versões saem conforme as correções, gravam um registro detalhado e mudam com frequência. As versões finais também ficam aqui, então não é preciso outro repositório.',
     'addr_h': 'Endereço',
-    'beta_back': 'Se quiser apenas versões finais, use o <a href="../">canal estável</a>.'
+    'beta_back': 'Se quiser apenas versões finais, use o <a href="../">canal estável</a>.',
+    'apps_h': 'Aplicativos',
+    'apps_note': 'A grade é montada a partir do próprio repositório: o que está nele é o que aparece.',
+    'apps_empty': 'Por enquanto vazio: este canal ainda não tem pacotes.',
+    'app_open_cydia': 'Abrir no Cydia',
+    'app_open_sileo': 'Abrir no Sileo',
+    'app_facts_h': 'Detalhes',
+    'app_version': 'Versão',
+    'app_size': 'Tamanho',
+    'app_author': 'Desenvolvedor',
+    'app_section': 'Seção',
+    'app_depends': 'Requisitos',
+    'app_id': 'Nome do pacote',
+    'app_versions_h': 'Versões neste canal',
+    'app_versions_note': 'Normalmente não é preciso instalar à mão: é para isso que serve o repositório.',
+    'app_back': 'Voltar ao repositório'
 },
 
 'uk': {
@@ -177,7 +252,22 @@
     'sub_beta': 'Зневаджувальні збірки моїх проєктів',
     'intro_beta': 'Це канал випробувань спільного джерела моїх проєктів для iOS. Збірки тут виходять у міру виправлень, пишуть докладний журнал і змінюються часто. Випуски лежать тут само, тож друге джерело додавати ні до чого.',
     'addr_h': 'Адреса',
-    'beta_back': 'Потрібні лише випуски — візьміть <a href="../">стабільний канал</a>.'
+    'beta_back': 'Потрібні лише випуски — візьміть <a href="../">стабільний канал</a>.',
+    'apps_h': 'Програми',
+    'apps_note': 'Сітка збирається з самого джерела: що в ньому лежить, те й показано.',
+    'apps_empty': 'Поки порожньо: у цьому каналі ще немає пакунків.',
+    'app_open_cydia': 'Відкрити в Cydia',
+    'app_open_sileo': 'Відкрити в Sileo',
+    'app_facts_h': 'Відомості',
+    'app_version': 'Версія',
+    'app_size': 'Розмір',
+    'app_author': 'Розробник',
+    'app_section': 'Розділ',
+    'app_depends': 'Залежності',
+    'app_id': 'Ім’я пакунка',
+    'app_versions_h': 'Версії в цьому каналі',
+    'app_versions_note': 'Встановлювати їх вручну зазвичай не потрібно — для цього й є джерело.',
+    'app_back': 'Назад до джерела'
 },
 
 'be': {
@@ -205,7 +295,22 @@
     'sub_beta': 'Адладачныя зборкі маіх праектаў',
     'intro_beta': 'Гэта канал выпрабаванняў агульнай крыніцы маіх праектаў для iOS. Зборкі тут выходзяць па меры правак, пішуць падрабязны журнал і мяняюцца часта. Выпускі ляжаць тут жа, таму другую крыніцу дадаваць няма патрэбы.',
     'addr_h': 'Адрас',
-    'beta_back': 'Патрэбны толькі выпускі — вазьміце <a href="../">стабільны канал</a>.'
+    'beta_back': 'Патрэбны толькі выпускі — вазьміце <a href="../">стабільны канал</a>.',
+    'apps_h': 'Праграмы',
+    'apps_note': 'Сетка збіраецца з самой крыніцы: што ў ёй ляжыць, тое і паказана.',
+    'apps_empty': 'Пакуль пуста: у гэтым канале яшчэ няма пакетаў.',
+    'app_open_cydia': 'Адкрыць у Cydia',
+    'app_open_sileo': 'Адкрыць у Sileo',
+    'app_facts_h': 'Звесткі',
+    'app_version': 'Версія',
+    'app_size': 'Памер',
+    'app_author': 'Распрацоўнік',
+    'app_section': 'Раздзел',
+    'app_depends': 'Залежнасці',
+    'app_id': 'Імя пакета',
+    'app_versions_h': 'Версіі ў гэтым канале',
+    'app_versions_note': 'Ставіць іх уручную звычайна не трэба — для гэтага і ёсць крыніца.',
+    'app_back': 'Назад да крыніцы'
 },
 
 'kk': {
@@ -233,7 +338,22 @@
     'sub_beta': 'Жобаларымның жөндеу нұсқалары',
     'intro_beta': 'Бұл — iOS жобаларымның ортақ дереккөзінің сынақ арнасы. Мұндағы нұсқалар түзетулерге қарай шығады, егжей-тегжейлі журнал жазады және жиі жаңарады. Шыққан нұсқалар да осында, сондықтан екінші дереккөздің қажеті жоқ.',
     'addr_h': 'Мекенжай',
-    'beta_back': 'Тек шыққан нұсқалар керек болса — <a href="../">тұрақты арнаны</a> алыңыз.'
+    'beta_back': 'Тек шыққан нұсқалар керек болса — <a href="../">тұрақты арнаны</a> алыңыз.',
+    'apps_h': 'Қолданбалар',
+    'apps_note': 'Тор дереккөздің өзінен жиналады: ішінде не болса, сол көрсетіледі.',
+    'apps_empty': 'Әзірге бос: бұл арнада әлі десте жоқ.',
+    'app_open_cydia': 'Cydia-да ашу',
+    'app_open_sileo': 'Sileo-да ашу',
+    'app_facts_h': 'Мәліметтер',
+    'app_version': 'Нұсқа',
+    'app_size': 'Өлшемі',
+    'app_author': 'Әзірлеуші',
+    'app_section': 'Бөлім',
+    'app_depends': 'Тәуелділіктер',
+    'app_id': 'Дестенің аты',
+    'app_versions_h': 'Осы арнадағы нұсқалар',
+    'app_versions_note': 'Оларды қолмен орнатудың әдетте қажеті жоқ — дереккөз сол үшін керек.',
+    'app_back': 'Дереккөзге оралу'
 },
 
 'zh': {
@@ -261,7 +381,22 @@
     'sub_beta': '我的项目的调试版本',
     'intro_beta': '这是我 iOS 项目统一软件源的测试通道。这里的版本随修改发布，会记录详细日志，更新频繁。正式版本同样放在这里，无需再添加别的源。',
     'addr_h': '地址',
-    'beta_back': '只需要正式版本，请选择<a href="../">稳定通道</a>。'
+    'beta_back': '只需要正式版本，请选择<a href="../">稳定通道</a>。',
+    'apps_h': '应用',
+    'apps_note': '这个列表直接来自软件源：里面有什么，这里就显示什么。',
+    'apps_empty': '目前为空：该通道还没有软件包。',
+    'app_open_cydia': '在 Cydia 中打开',
+    'app_open_sileo': '在 Sileo 中打开',
+    'app_facts_h': '详细信息',
+    'app_version': '版本',
+    'app_size': '大小',
+    'app_author': '开发者',
+    'app_section': '分类',
+    'app_depends': '依赖',
+    'app_id': '软件包名',
+    'app_versions_h': '该通道中的版本',
+    'app_versions_note': '通常不必手动安装，软件源就是做这件事的。',
+    'app_back': '返回软件源'
 },
 
 'ja': {
@@ -289,7 +424,22 @@
     'sub_beta': '私のプロジェクトのデバッグ版',
     'intro_beta': 'ここは私の iOS プロジェクト共通リポジトリの試験チャンネルです。修正のたびにビルドが出て、詳しいログを書き、頻繁に変わります。リリース版も同じ場所にあるので、別のリポジトリを足す必要はありません。',
     'addr_h': 'アドレス',
-    'beta_back': 'リリース版だけでよければ<a href="../">安定版チャンネル</a>をどうぞ。'
+    'beta_back': 'リリース版だけでよければ<a href="../">安定版チャンネル</a>をどうぞ。',
+    'apps_h': 'アプリ',
+    'apps_note': '一覧はリポジトリそのものから作られます。入っているものがそのまま並びます。',
+    'apps_empty': '今は空です。このチャンネルにはまだパッケージがありません。',
+    'app_open_cydia': 'Cydia で開く',
+    'app_open_sileo': 'Sileo で開く',
+    'app_facts_h': '詳細',
+    'app_version': 'バージョン',
+    'app_size': 'サイズ',
+    'app_author': '開発者',
+    'app_section': '分類',
+    'app_depends': '必要条件',
+    'app_id': 'パッケージ名',
+    'app_versions_h': 'このチャンネルのバージョン',
+    'app_versions_note': '手で入れる必要はふつうありません。そのためのリポジトリです。',
+    'app_back': 'リポジトリに戻る'
 }
 
     };
