@@ -496,6 +496,44 @@ def collect(channel_base):
     return found
 
 
+def same_png(path, data):
+    """
+    Тот же ли это снимок — по точкам, а не по байтам.
+
+    Разные сборки библиотек жмут PNG по-разному: картинка та же,
+    а байты другие. Сверяя байты, мы клали бы в git новый файл при
+    каждой пересборке — то на моей машине, то на машине GitHub, и так
+    без конца. Пикселей это не касается.
+
+    Без Pillow сверяем байтами: хуже, но работает везде.
+    """
+    if not os.path.exists(path):
+        return False
+
+    with open(path, "rb") as handle:
+        old = handle.read()
+
+    if old == data:
+        return True
+
+    try:
+        from PIL import Image
+    except ImportError:
+        return False
+
+    try:
+        with Image.open(io.BytesIO(old)) as before, \
+             Image.open(io.BytesIO(data)) as after:
+
+            before = before.convert("1")
+            after = after.convert("1")
+
+            return (before.size == after.size and
+                    before.tobytes() == after.tobytes())
+    except Exception:
+        return False
+
+
 def write_qr(channel_base, url):
     """
     Значок с адресом канала — чтобы завести источник на телефоне,
@@ -525,13 +563,7 @@ def write_qr(channel_base, url):
 
     data = kept.getvalue()
 
-    old = None
-
-    if os.path.exists(target):
-        with open(target, "rb") as handle:
-            old = handle.read()
-
-    if old == data:
+    if same_png(target, data):
         return False
 
     with open(target, "wb") as handle:
