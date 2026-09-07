@@ -12,6 +12,7 @@ on:
   push:
     paths:
       - '**/debs/**'
+      - '**/ipa/**'
       - 'tools/**'
       - 'i18n.js'
       - 'style.css'
