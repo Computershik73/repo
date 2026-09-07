@@ -35,8 +35,8 @@ jobs:
             exit 0
           fi
 
-          git config user.name "Ilya Vysotsky"
-          git config user.email "il.mohoff2016@yandex.com"
+          git config user.name "Computershik73"
+          git config user.email "il.mohoff2016@yandex.ru"
 
           git add CydiaIcon.png beta/CydiaIcon.png
           git commit -m "Значок источника: аватарка с GitHub"
