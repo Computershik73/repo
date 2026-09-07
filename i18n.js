@@ -51,6 +51,7 @@
     'app_id': 'Имя пакета',
     'app_versions_h': 'Версии в этом канале',
     'app_versions_note': 'Ставить их вручную обычно не нужно — за этим и нужен источник.',
+    'app_ipa_note': 'IPA — для установки своей подписью, без джейлбрейка.',
     'app_back': 'Назад к источнику'
 },
 
@@ -93,6 +94,7 @@
     'app_id': 'Package name',
     'app_versions_h': 'Versions in this channel',
     'app_versions_note': 'You normally do not need to install these by hand — that is what the source is for.',
+    'app_ipa_note': 'The IPA is for sideloading with your own signature, without a jailbreak.',
     'app_back': 'Back to the source'
 },
 
@@ -135,6 +137,7 @@
     'app_id': 'Nombre del paquete',
     'app_versions_h': 'Versiones en este canal',
     'app_versions_note': 'Normalmente no hace falta instalarlas a mano: para eso está el repositorio.',
+    'app_ipa_note': 'El IPA sirve para instalar con tu propia firma, sin jailbreak.',
     'app_back': 'Volver al repositorio'
 },
 
@@ -177,6 +180,7 @@
     'app_id': 'Paketname',
     'app_versions_h': 'Versionen in diesem Kanal',
     'app_versions_note': 'Von Hand installieren muss man sie normalerweise nicht – dafür gibt es die Quelle.',
+    'app_ipa_note': 'Die IPA ist zum Installieren mit eigener Signatur, ohne Jailbreak.',
     'app_back': 'Zurück zur Quelle'
 },
 
@@ -219,6 +223,7 @@
     'app_id': 'Nome do pacote',
     'app_versions_h': 'Versões neste canal',
     'app_versions_note': 'Normalmente não é preciso instalar à mão: é para isso que serve o repositório.',
+    'app_ipa_note': 'O IPA serve para instalar com a sua própria assinatura, sem jailbreak.',
     'app_back': 'Voltar ao repositório'
 },
 
@@ -261,6 +266,7 @@
     'app_id': 'Ім’я пакунка',
     'app_versions_h': 'Версії в цьому каналі',
     'app_versions_note': 'Встановлювати їх вручну зазвичай не потрібно — для цього й є джерело.',
+    'app_ipa_note': 'IPA — для встановлення власним підписом, без джейлбрейка.',
     'app_back': 'Назад до джерела'
 },
 
@@ -303,6 +309,7 @@
     'app_id': 'Імя пакета',
     'app_versions_h': 'Версіі ў гэтым канале',
     'app_versions_note': 'Ставіць іх уручную звычайна не трэба — для гэтага і ёсць крыніца.',
+    'app_ipa_note': 'IPA — для ўсталявання ўласным подпісам, без джэйлбрэйка.',
     'app_back': 'Назад да крыніцы'
 },
 
@@ -345,6 +352,7 @@
     'app_id': 'Дестенің аты',
     'app_versions_h': 'Осы арнадағы нұсқалар',
     'app_versions_note': 'Оларды қолмен орнатудың әдетте қажеті жоқ — дереккөз сол үшін керек.',
+    'app_ipa_note': 'IPA — джейлбрейксіз, өз қолтаңбаңызбен орнатуға арналған.',
     'app_back': 'Дереккөзге оралу'
 },
 
@@ -387,6 +395,7 @@
     'app_id': '软件包名',
     'app_versions_h': '该通道中的版本',
     'app_versions_note': '通常不必手动安装，软件源就是做这件事的。',
+    'app_ipa_note': 'IPA 用于自签名安装，无需越狱。',
     'app_back': '返回软件源'
 },
 
@@ -429,6 +438,7 @@
     'app_id': 'パッケージ名',
     'app_versions_h': 'このチャンネルのバージョン',
     'app_versions_note': '手で入れる必要はふつうありません。そのためのリポジトリです。',
+    'app_ipa_note': 'IPA は自分の署名で入れるためのもの。脱獄は要りません。',
     'app_back': 'リポジトリに戻る'
 }
 

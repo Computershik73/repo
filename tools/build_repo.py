@@ -150,28 +150,43 @@ def debs_in(directory):
     return sorted(name for name in os.listdir(directory) if name.endswith(".deb"))
 
 
+def files_in(directory, suffix):
+    if not os.path.isdir(directory):
+        return []
+
+    return sorted(name for name in os.listdir(directory) if name.endswith(suffix))
+
+
 def mirror_stable_into_beta():
     """Стабильные пакеты кладутся и в канал испытаний.
 
     Не ссылкой и не путём `../debs/`: старая APT в Cydia такие пути
     разбирает по-разному, а лишние два мегабайта на выпуск — цена,
     которую можно не считать. Зато каждый канал самодостаточен.
+
+    То же и с файлами `.ipa`: они не для Cydia, а для установки своей
+    подписью, но лежать должны рядом с той же версией пакета — в каком
+    канале её взяли, оттуда и файл.
     """
-    source = os.path.join(ROOT, "debs")
-    target = os.path.join(ROOT, "beta", "debs")
-
-    if not os.path.isdir(target):
-        os.makedirs(target)
-
     copied = 0
 
-    for name in debs_in(source):
-        destination = os.path.join(target, name)
+    for folder, suffix in (("debs", ".deb"), ("ipa", ".ipa")):
+        source = os.path.join(ROOT, folder)
+        target = os.path.join(ROOT, "beta", folder)
 
-        if not os.path.exists(destination):
-            shutil.copy2(os.path.join(source, name), destination)
+        if not os.path.isdir(source):
+            continue
 
-            copied += 1
+        if not os.path.isdir(target):
+            os.makedirs(target)
+
+        for name in files_in(source, suffix):
+            destination = os.path.join(target, name)
+
+            if not os.path.exists(destination):
+                shutil.copy2(os.path.join(source, name), destination)
+
+                copied += 1
 
     return copied
 
@@ -459,6 +474,16 @@ def collect(channel_base):
         entry["_file"] = "debs/" + name
         entry["_size"] = size
 
+        """
+        Рядом с пакетом может лежать `.ipa` той же версии — его собирает
+        `make package ipa`. Имя у них общее до `_iphoneos-arm`, поэтому
+        искать нечего: считаем и проверяем.
+        """
+        ipa = "ipa/%s_%s.ipa" % (package, fields.get("Version", ""))
+
+        entry["_ipa"] = ipa if os.path.exists(
+            os.path.join(channel_base, ipa.replace("/", os.sep))) else None
+
         found.setdefault(package, []).append(entry)
 
     for package in found:
@@ -548,16 +573,31 @@ def app_page_html(package, versions, icon, depth):
         ("app_id", "Имя пакета", escape(package)),
     ]
 
-    rows = "\n".join(
+    facts_rows = "\n".join(
         '        <tr><th data-i18n="%s">%s</th><td>%s</td></tr>' % (key, name, value)
         for key, name, value in facts if value
     )
 
-    olds = "\n".join(
-        '        <li><a href="../../%s">%s</a> — %s</li>'
-        % (item["_file"], escape(item.get("Version", "")), human_size(item["_size"]))
-        for item in versions
-    )
+    rows = []
+
+    for item in versions:
+        row = ('        <li><a href="../../%s">%s</a> — %s'
+               % (item["_file"], escape(item.get("Version", "")),
+                  human_size(item["_size"])))
+
+        if item.get("_ipa"):
+            row += ' &middot; <a href="../../%s">IPA</a>' % item["_ipa"]
+
+        rows.append(row + "</li>")
+
+    olds = "\n".join(rows)
+
+    # Про `.ipa` говорим только там, где он есть.
+    ipa_note = ""
+
+    if any(item.get("_ipa") for item in versions):
+        ipa_note = ('    <p class="note" data-i18n="app_ipa_note">IPA — '
+                    'для установки своей подписью, без джейлбрейка.</p>\n')
 
     body = (
         '<div class="app-head">\n'
@@ -582,13 +622,14 @@ def app_page_html(package, versions, icon, depth):
         '    <p class="note" data-i18n="app_versions_note">Ставить их вручную '
         'обычно не нужно — за этим и нужен источник.</p>\n'
         '    <ul class="olds">\n%s\n    </ul>\n'
+        '%s'
         '</div>\n\n'
         '%s\n'
         '<p><a href="../../" data-i18n="app_back">Назад к источнику</a></p>\n\n'
         '%s\n'
         '</div>\n'
     ) % (icon, escape(title), escape(newest.get("Description", "")),
-         package, package, rows, olds, author_card(), language_row())
+         package, package, facts_rows, olds, ipa_note, author_card(), language_row())
 
     # Заголовок окна не переводится: в нём имя приложения, а его
     # переводить нечем и незачем.
