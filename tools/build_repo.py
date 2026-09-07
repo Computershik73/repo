@@ -532,7 +532,7 @@ def grid_html(packages, icons):
     return '<div class="grid">\n%s\n</div>' % "\n".join(cells)
 
 
-def app_page_html(package, versions, icon):
+def app_page_html(package, versions, icon, depth):
     """Страница одного приложения — как карточка пакета в Cydia."""
     newest = versions[0]
 
@@ -592,7 +592,7 @@ def app_page_html(package, versions, icon):
 
     # Заголовок окна не переводится: в нём имя приложения, а его
     # переводить нечем и незачем.
-    return page(None, "%s — %s" % (title, ORIGIN), body, 2)
+    return page(None, "%s — %s" % (title, ORIGIN), body, depth)
 
 
 def write_pages(channel, packages, icons):
@@ -617,6 +617,14 @@ def write_pages(channel, packages, icons):
             with io.open(index, "w", encoding="utf-8", newline="\n") as handle:
                 handle.write(text)
 
+    """
+    Стиль и словарь лежат в корне источника, а не в канале, поэтому
+    до них у канала испытаний на шаг дальше: `/beta/apps/<пакет>/`
+    — это три ступени вверх, а не две. Считаем, а не пишем числом:
+    ошибка здесь тихая — страница просто приезжает без оформления.
+    """
+    depth = 2 + len([part for part in channel["path"].split("/") if part])
+
     folder = os.path.join(base, "apps")
 
     # Ушедшие пакеты не оставляют за собой страниц.
@@ -632,7 +640,7 @@ def write_pages(channel, packages, icons):
             os.makedirs(target)
 
         html = app_page_html(package, packages[package],
-                             icons.get(package, "CydiaIcon.png"))
+                             icons.get(package, "CydiaIcon.png"), depth)
 
         with io.open(os.path.join(target, "index.html"), "w",
                      encoding="utf-8", newline="\n") as handle:
