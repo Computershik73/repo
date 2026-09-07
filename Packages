@@ -6,10 +6,10 @@ Author: Computershik
 Section: Tweaks
 Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5000), preferenceloader
 Architecture: iphoneos-arm
-Version: 1.1.0
+Version: 1.1.1
 Installed-Size: 464
-Filename: debs/ru.computershik.cydiaqr_1.1.0_iphoneos-arm.deb
-Size: 93230
-MD5sum: f18ce4e3f04c32839b6d87f94b7facd1
-SHA1: bd557fc29700803f5f2e8194b57f2fb7708031f1
-SHA256: c4f557ed566df3ccc4b2c8b5aafd0c3cfb917466acade920e2856f80fe2072dc
+Filename: debs/ru.computershik.cydiaqr_1.1.1_iphoneos-arm.deb
+Size: 95374
+MD5sum: fbbb3fa71fcc7f507e347258fadf1a97
+SHA1: bb7aa6239442057a2f255c3bf34546ad268463fc
+SHA256: ee8eb4ea1f3488679f580a972604e8cc39da34d07d27a7e7ee5025c019f08962
