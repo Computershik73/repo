@@ -2486,6 +2486,22 @@ Author: computershik
 Section: Multimedia
 Depends: firmware (>= 5.1)
 Architecture: iphoneos-arm
+Version: 1.5-3+debug
+Installed-Size: 13968
+Filename: debs/ru.computershik.troubadour_1.5-3+debug_iphoneos-arm.deb
+Size: 5268168
+MD5sum: feee2311ae632e5af8b8d0fb84884c44
+SHA1: 85e49a13c23ecd1ca666fb415d5b2f219809c7d2
+SHA256: 3cde15e6872c576146cdc83bb0a65aeac29faab5a76e09dce32e5d303ce4e722
+
+Package: ru.computershik.troubadour
+Name: Troubadour
+Description: Клиент YouTube для iOS 5.1 и новее
+Maintainer: computershik
+Author: computershik
+Section: Multimedia
+Depends: firmware (>= 5.1)
+Architecture: iphoneos-arm
 Version: 1.5
 Installed-Size: 10120
 Filename: debs/ru.computershik.troubadour_1.5_iphoneos-arm.deb
