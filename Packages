@@ -57,7 +57,7 @@ Architecture: iphoneos-arm
 Version: 1.6
 Installed-Size: 10940
 Filename: debs/ru.computershik.troubadour_1.6_iphoneos-arm.deb
-Size: 4492178
-MD5sum: 5e6aab9b4d88d3f01fbd8b84ea45aef1
-SHA1: 96dab9a7bb7f3ffc7b2bc59c6068290719c43850
-SHA256: cf08fcd51509cc85ff3d467e6f213d0c8722120e8770aa171bfd29d2c0e121e3
+Size: 4492160
+MD5sum: 390ceb7a9babee3f0e705e36bc3b1c55
+SHA1: 0646be8572b37e848ff05d11463f319ab8977e18
+SHA256: 276678b99f919181b455f2b95466a009628faa6a22714f8cdafba24f89b711cd
