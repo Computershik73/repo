@@ -2823,9 +2823,9 @@ Section: Multimedia
 Depends: firmware (>= 5.1)
 Architecture: iphoneos-arm
 Version: 1.6
-Installed-Size: 10924
+Installed-Size: 10940
 Filename: debs/ru.computershik.troubadour_1.6_iphoneos-arm.deb
-Size: 4484732
-MD5sum: 2d23c9462f64fbcbc38d39b7b7bbf969
-SHA1: e91135920522bcee38bd39493c93c79970c8b25b
-SHA256: ccac7bc8725871bed9fd6971307f7d41eb62a2a3bfab91c1ed63b4255569e1d1
+Size: 4492178
+MD5sum: 5e6aab9b4d88d3f01fbd8b84ea45aef1
+SHA1: 96dab9a7bb7f3ffc7b2bc59c6068290719c43850
+SHA256: cf08fcd51509cc85ff3d467e6f213d0c8722120e8770aa171bfd29d2c0e121e3
