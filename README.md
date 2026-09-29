@@ -31,4 +31,5 @@ https://computershik73.github.io/repo/beta/
 [Telegram](https://t.me/cmplog) ·
 [поддержать](https://pay.cloudtips.ru/p/83821e32)
 
-Исходного кода здесь нет и не будет — только собранные пакеты.
+Здесь лежат только собранные пакеты. Исходники Troubadour открыты:
+https://github.com/Computershik73/Troubadour
