@@ -8,6 +8,7 @@ Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5000), preferenceloader
 Architecture: iphoneos-arm
 Version: 1.1.2
 Installed-Size: 464
+Depiction: https://computershik73.github.io/repo/apps/ru.computershik.cydiaqr/
 Filename: debs/ru.computershik.cydiaqr_1.1.2_iphoneos-arm.deb
 Size: 95772
 MD5sum: b6749ae83b756b4c71e1b52420918308
@@ -24,6 +25,8 @@ Depends: firmware (>= 5.1)
 Architecture: iphoneos-arm
 Version: 1.4
 Installed-Size: 10084
+Depiction: https://computershik73.github.io/repo/apps/ru.computershik.troubadour/
+Icon: https://computershik73.github.io/repo/icons/ru.computershik.troubadour.png
 Filename: debs/ru.computershik.troubadour_1.4_iphoneos-arm.deb
 Size: 4248012
 MD5sum: bff4391a0f8d82f1562305a902082d79
@@ -40,6 +43,8 @@ Depends: firmware (>= 5.1)
 Architecture: iphoneos-arm
 Version: 1.5
 Installed-Size: 10120
+Depiction: https://computershik73.github.io/repo/apps/ru.computershik.troubadour/
+Icon: https://computershik73.github.io/repo/icons/ru.computershik.troubadour.png
 Filename: debs/ru.computershik.troubadour_1.5_iphoneos-arm.deb
 Size: 4249606
 MD5sum: 521db0444da1b6a386816d45d65b46ba
@@ -56,6 +61,8 @@ Depends: firmware (>= 5.1)
 Architecture: iphoneos-arm
 Version: 1.6
 Installed-Size: 10940
+Depiction: https://computershik73.github.io/repo/apps/ru.computershik.troubadour/
+Icon: https://computershik73.github.io/repo/icons/ru.computershik.troubadour.png
 Filename: debs/ru.computershik.troubadour_1.6_iphoneos-arm.deb
 Size: 4492160
 MD5sum: 390ceb7a9babee3f0e705e36bc3b1c55

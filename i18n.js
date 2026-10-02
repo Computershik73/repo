@@ -13,7 +13,7 @@
     var STRINGS = {
 
 'ru': {
-    'title_index': 'Источник Computershik73 для Cydia и Sileo',
+    'title_index': 'Источник Computershik73 для Cydia, Sileo и Zebra',
     'intro1': 'Приложения от Computershik для iOS.',
     'intro2': 'Каналов два. Стабильный — то, чем можно пользоваться. Канал испытаний — сборки по мере правок: они пишут подробный журнал и меняются часто.',
     'stable_h': 'Стабильный',
@@ -22,6 +22,7 @@
     'beta_note': 'Отладочные сборки, а вместе с ними и выпуски. Подписавшись сюда, выпуск вы тоже увидите — как только его номер станет старше.',
     'btn_cydia': 'Добавить в Cydia',
     'btn_sileo': 'Добавить в Sileo',
+    'btn_zebra': 'Добавить в Zebra',
     'switch_h': 'Как перейти с одного канала на другой',
     'switch_p1': 'Достаточно добавить нужный источник и убрать ненужный. Пакет один и тот же, поэтому переход выглядит обычным обновлением — ни удалять, ни переустанавливать ничего не надо.',
     'switch_p2': 'Если добавлены оба, ставиться будет то, что новее, — как правило, отладочная сборка.',
@@ -42,6 +43,7 @@
     'apps_empty': 'Пока пусто: в этом канале ещё нет пакетов.',
     'app_open_cydia': 'Открыть в Cydia',
     'app_open_sileo': 'Открыть в Sileo',
+    'app_open_zebra': 'Открыть в Zebra',
     'app_facts_h': 'Сведения',
     'app_version': 'Версия',
     'app_size': 'Размер',
@@ -56,7 +58,7 @@
 },
 
 'en': {
-    'title_index': 'Computershik73 source for Cydia and Sileo',
+    'title_index': 'Computershik73 source for Cydia, Sileo and Zebra',
     'intro1': 'Apps by Computershik for iOS.',
     'intro2': 'There are two channels. Stable is the one to install and use. Testing carries builds made as fixes land: they write a detailed log and change often.',
     'stable_h': 'Stable',
@@ -65,6 +67,7 @@
     'beta_note': 'Debug builds, and the releases along with them. Subscribe here and you will get a release as well, as soon as its number is higher.',
     'btn_cydia': 'Add to Cydia',
     'btn_sileo': 'Add to Sileo',
+    'btn_zebra': 'Add to Zebra',
     'switch_h': 'Switching between channels',
     'switch_p1': 'Just add the source you want and remove the other one. The package is the same, so the switch looks like an ordinary update — nothing to uninstall or reinstall.',
     'switch_p2': 'If both are added, whichever is newer gets installed — usually the debug build.',
@@ -85,6 +88,7 @@
     'apps_empty': 'Empty for now: this channel has no packages yet.',
     'app_open_cydia': 'Open in Cydia',
     'app_open_sileo': 'Open in Sileo',
+    'app_open_zebra': 'Open in Zebra',
     'app_facts_h': 'Details',
     'app_version': 'Version',
     'app_size': 'Size',
@@ -99,7 +103,7 @@
 },
 
 'es': {
-    'title_index': 'Repositorio de Computershik73 para Cydia y Sileo',
+    'title_index': 'Repositorio de Computershik73 para Cydia, Sileo y Zebra',
     'intro1': 'Aplicaciones de Computershik para iOS.',
     'intro2': 'Hay dos canales. El estable es el que se instala y se usa. El de pruebas trae compilaciones según se hacen los cambios: guardan un registro detallado y cambian a menudo.',
     'stable_h': 'Estable',
@@ -108,6 +112,7 @@
     'beta_note': 'Compilaciones de depuración y también las versiones finales. Si te suscribes aquí, verás igualmente la versión final en cuanto su número sea mayor.',
     'btn_cydia': 'Añadir a Cydia',
     'btn_sileo': 'Añadir a Sileo',
+    'btn_zebra': 'Añadir a Zebra',
     'switch_h': 'Cómo cambiar de un canal a otro',
     'switch_p1': 'Basta con añadir el repositorio que quieras y quitar el otro. El paquete es el mismo, así que el cambio es una actualización normal: no hay que desinstalar ni reinstalar nada.',
     'switch_p2': 'Si están añadidos los dos, se instalará el más nuevo, que suele ser la compilación de depuración.',
@@ -128,6 +133,7 @@
     'apps_empty': 'Por ahora vacío: este canal aún no tiene paquetes.',
     'app_open_cydia': 'Abrir en Cydia',
     'app_open_sileo': 'Abrir en Sileo',
+    'app_open_zebra': 'Abrir en Zebra',
     'app_facts_h': 'Detalles',
     'app_version': 'Versión',
     'app_size': 'Tamaño',
@@ -142,7 +148,7 @@
 },
 
 'de': {
-    'title_index': 'Quelle von Computershik73 für Cydia und Sileo',
+    'title_index': 'Quelle von Computershik73 für Cydia, Sileo und Zebra',
     'intro1': 'Programme von Computershik für iOS.',
     'intro2': 'Es gibt zwei Kanäle. Der stabile ist zum Benutzen. Der Testkanal bringt Builds, sobald etwas geändert wurde: Sie schreiben ein ausführliches Protokoll und wechseln häufig.',
     'stable_h': 'Stabil',
@@ -151,6 +157,7 @@
     'beta_note': 'Debug-Builds und die Veröffentlichungen gleich mit. Wer hier abonniert, bekommt auch eine Veröffentlichung – sobald ihre Nummer höher ist.',
     'btn_cydia': 'Zu Cydia hinzufügen',
     'btn_sileo': 'Zu Sileo hinzufügen',
+    'btn_zebra': 'Zu Zebra hinzufügen',
     'switch_h': 'Wie man den Kanal wechselt',
     'switch_p1': 'Einfach die gewünschte Quelle hinzufügen und die andere entfernen. Das Paket ist dasselbe, der Wechsel sieht also wie ein normales Update aus – nichts muss deinstalliert oder neu installiert werden.',
     'switch_p2': 'Sind beide eingetragen, wird das Neuere installiert – meist der Debug-Build.',
@@ -171,6 +178,7 @@
     'apps_empty': 'Noch leer: In diesem Kanal liegen bisher keine Pakete.',
     'app_open_cydia': 'In Cydia öffnen',
     'app_open_sileo': 'In Sileo öffnen',
+    'app_open_zebra': 'In Zebra öffnen',
     'app_facts_h': 'Angaben',
     'app_version': 'Version',
     'app_size': 'Größe',
@@ -185,7 +193,7 @@
 },
 
 'pt-br': {
-    'title_index': 'Repositório do Computershik73 para Cydia e Sileo',
+    'title_index': 'Repositório do Computershik73 para Cydia, Sileo e Zebra',
     'intro1': 'Aplicativos de Computershik para iOS.',
     'intro2': 'São dois canais. O estável é o que se instala e usa. O de testes traz versões conforme as correções saem: elas gravam um registro detalhado e mudam com frequência.',
     'stable_h': 'Estável',
@@ -194,6 +202,7 @@
     'beta_note': 'Versões de depuração e, junto com elas, as finais. Assinando aqui, você também recebe a versão final assim que o número dela for maior.',
     'btn_cydia': 'Adicionar ao Cydia',
     'btn_sileo': 'Adicionar ao Sileo',
+    'btn_zebra': 'Adicionar ao Zebra',
     'switch_h': 'Como trocar de canal',
     'switch_p1': 'Basta adicionar o repositório desejado e remover o outro. O pacote é o mesmo, então a troca é uma atualização comum: não é preciso desinstalar nem reinstalar nada.',
     'switch_p2': 'Se os dois estiverem adicionados, será instalado o mais novo — normalmente a versão de depuração.',
@@ -214,6 +223,7 @@
     'apps_empty': 'Por enquanto vazio: este canal ainda não tem pacotes.',
     'app_open_cydia': 'Abrir no Cydia',
     'app_open_sileo': 'Abrir no Sileo',
+    'app_open_zebra': 'Abrir no Zebra',
     'app_facts_h': 'Detalhes',
     'app_version': 'Versão',
     'app_size': 'Tamanho',
@@ -228,7 +238,7 @@
 },
 
 'uk': {
-    'title_index': 'Джерело Computershik73 для Cydia і Sileo',
+    'title_index': 'Джерело Computershik73 для Cydia, Sileo і Zebra',
     'intro1': 'Програми від Computershik для iOS.',
     'intro2': 'Каналів два. Стабільний — те, чим можна користуватися. Канал випробувань — збірки в міру виправлень: вони пишуть докладний журнал і змінюються часто.',
     'stable_h': 'Стабільний',
@@ -237,6 +247,7 @@
     'beta_note': 'Зневаджувальні збірки, а разом із ними й випуски. Підписавшись сюди, випуск ви теж отримаєте — щойно його номер стане більшим.',
     'btn_cydia': 'Додати в Cydia',
     'btn_sileo': 'Додати в Sileo',
+    'btn_zebra': 'Додати в Zebra',
     'switch_h': 'Як перейти з одного каналу на інший',
     'switch_p1': 'Досить додати потрібне джерело й прибрати непотрібне. Пакунок той самий, тож перехід виглядає звичайним оновленням — ні видаляти, ні перевстановлювати нічого не треба.',
     'switch_p2': 'Якщо додано обидва, встановлюватиметься новіше — зазвичай зневаджувальна збірка.',
@@ -257,6 +268,7 @@
     'apps_empty': 'Поки порожньо: у цьому каналі ще немає пакунків.',
     'app_open_cydia': 'Відкрити в Cydia',
     'app_open_sileo': 'Відкрити в Sileo',
+    'app_open_zebra': 'Відкрити в Zebra',
     'app_facts_h': 'Відомості',
     'app_version': 'Версія',
     'app_size': 'Розмір',
@@ -271,7 +283,7 @@
 },
 
 'be': {
-    'title_index': 'Крыніца Computershik73 для Cydia і Sileo',
+    'title_index': 'Крыніца Computershik73 для Cydia, Sileo і Zebra',
     'intro1': 'Праграмы ад Computershik для iOS.',
     'intro2': 'Каналаў два. Стабільны — тое, чым можна карыстацца. Канал выпрабаванняў — зборкі па меры правак: яны пішуць падрабязны журнал і мяняюцца часта.',
     'stable_h': 'Стабільны',
@@ -280,6 +292,7 @@
     'beta_note': 'Адладачныя зборкі, а разам з імі і выпускі. Падпісаўшыся сюды, выпуск вы таксама атрымаеце — як толькі яго нумар стане большым.',
     'btn_cydia': 'Дадаць у Cydia',
     'btn_sileo': 'Дадаць у Sileo',
+    'btn_zebra': 'Дадаць у Zebra',
     'switch_h': 'Як перайсці з аднаго канала на іншы',
     'switch_p1': 'Дастаткова дадаць патрэбную крыніцу і прыбраць непатрэбную. Пакет той самы, таму пераход выглядае звычайным абнаўленнем — ні выдаляць, ні пераўсталёўваць нічога не трэба.',
     'switch_p2': 'Калі дададзены абодва, ставіцца будзе тое, што навейшае, — звычайна адладачная зборка.',
@@ -300,6 +313,7 @@
     'apps_empty': 'Пакуль пуста: у гэтым канале яшчэ няма пакетаў.',
     'app_open_cydia': 'Адкрыць у Cydia',
     'app_open_sileo': 'Адкрыць у Sileo',
+    'app_open_zebra': 'Адкрыць у Zebra',
     'app_facts_h': 'Звесткі',
     'app_version': 'Версія',
     'app_size': 'Памер',
@@ -314,7 +328,7 @@
 },
 
 'kk': {
-    'title_index': 'Cydia мен Sileo үшін Computershik73 дереккөзі',
+    'title_index': 'Cydia, Sileo және Zebra үшін Computershik73 дереккөзі',
     'intro1': 'iOS үшін Computershik қолданбалары.',
     'intro2': 'Арна екеу. Тұрақтысы — күнделікті қолдануға арналған. Сынақ арнасы — түзетулер шыққан сайын жиналатын нұсқалар: олар егжей-тегжейлі журнал жазады және жиі жаңарады.',
     'stable_h': 'Тұрақты',
@@ -323,6 +337,7 @@
     'beta_note': 'Жөндеу нұсқалары, солармен бірге шыққан нұсқалар да. Мұнда жазылсаңыз, нөмірі жоғарылағанда шыққан нұсқаны да аласыз.',
     'btn_cydia': 'Cydia-ға қосу',
     'btn_sileo': 'Sileo-ға қосу',
+    'btn_zebra': 'Zebra-ға қосу',
     'switch_h': 'Бір арнадан екіншісіне қалай көшуге болады',
     'switch_p1': 'Керекті дереккөзді қосып, керексізін алып тастасаңыз болды. Дестенің өзі сол күйінде, сондықтан ауысу кәдімгі жаңарту сияқты өтеді — ештеңені жоюдың да, қайта орнатудың да қажеті жоқ.',
     'switch_p2': 'Екеуі де қосылса, жаңасы орнатылады — әдетте бұл жөндеу нұсқасы.',
@@ -343,6 +358,7 @@
     'apps_empty': 'Әзірге бос: бұл арнада әлі десте жоқ.',
     'app_open_cydia': 'Cydia-да ашу',
     'app_open_sileo': 'Sileo-да ашу',
+    'app_open_zebra': 'Zebra-да ашу',
     'app_facts_h': 'Мәліметтер',
     'app_version': 'Нұсқа',
     'app_size': 'Өлшемі',
@@ -357,7 +373,7 @@
 },
 
 'zh': {
-    'title_index': 'Computershik73 的 Cydia 与 Sileo 软件源',
+    'title_index': 'Computershik73 的 Cydia、Sileo 与 Zebra 软件源',
     'intro1': 'Computershik 的 iOS 应用。',
     'intro2': '共有两个通道。稳定通道用于日常使用；测试通道随着修改不断发布，会记录详细日志，更新频繁。',
     'stable_h': '稳定通道',
@@ -366,6 +382,7 @@
     'beta_note': '包含调试版本，正式版本也在其中。订阅这里后，只要正式版本号更高，同样会收到。',
     'btn_cydia': '添加到 Cydia',
     'btn_sileo': '添加到 Sileo',
+    'btn_zebra': '添加到 Zebra',
     'switch_h': '如何在两个通道之间切换',
     'switch_p1': '只需添加所需的源、移除不需要的即可。软件包是同一个，切换就是一次普通更新，无需卸载或重装。',
     'switch_p2': '如果两个都添加，则安装较新的那个，通常是调试版本。',
@@ -386,6 +403,7 @@
     'apps_empty': '目前为空：该通道还没有软件包。',
     'app_open_cydia': '在 Cydia 中打开',
     'app_open_sileo': '在 Sileo 中打开',
+    'app_open_zebra': '在 Zebra 中打开',
     'app_facts_h': '详细信息',
     'app_version': '版本',
     'app_size': '大小',
@@ -400,7 +418,7 @@
 },
 
 'ja': {
-    'title_index': 'Computershik73 のリポジトリ（Cydia / Sileo）',
+    'title_index': 'Computershik73 のリポジトリ（Cydia / Sileo / Zebra）',
     'intro1': 'Computershik の iOS 向けアプリ。',
     'intro2': 'チャンネルは二つあります。安定版はふだん使うためのもの。試験版は修正のたびに出るビルドで、詳しいログを書き、頻繁に変わります。',
     'stable_h': '安定版',
@@ -409,6 +427,7 @@
     'beta_note': 'デバッグ版に加えて、リリース版もここに置かれます。ここを登録しておけば、番号が上がった時点でリリース版も届きます。',
     'btn_cydia': 'Cydia に追加',
     'btn_sileo': 'Sileo に追加',
+    'btn_zebra': 'Zebra に追加',
     'switch_h': 'チャンネルの切り替え方',
     'switch_p1': '必要な配布元を追加し、いらない方を外すだけです。パッケージは同じなので、切り替えはふつうの更新として進みます。削除も入れ直しも要りません。',
     'switch_p2': '両方を登録している場合は新しい方が入ります。ふつうはデバッグ版です。',
@@ -429,6 +448,7 @@
     'apps_empty': '今は空です。このチャンネルにはまだパッケージがありません。',
     'app_open_cydia': 'Cydia で開く',
     'app_open_sileo': 'Sileo で開く',
+    'app_open_zebra': 'Zebra で開く',
     'app_facts_h': '詳細',
     'app_version': 'バージョン',
     'app_size': 'サイズ',

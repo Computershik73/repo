@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Пересборка указателей репозитория для Cydia и Sileo.
+Пересборка указателей репозитория для Cydia, Sileo и Zebra.
 
 Каналов два, и оба — «плоские» репозитории (`deb <адрес> ./`): такой
 адрес Cydia принимает прямо в окошке «добавить источник», а раскладка
@@ -130,12 +130,23 @@ def digests(path):
     return size, md5.hexdigest(), sha1.hexdigest(), sha256.hexdigest()
 
 
-def entry_for(deb_path, filename):
-    """Одна запись `Packages` — управляющий файл плюс подписи."""
+def entry_for(deb_path, filename, extra=None):
+    """Одна запись `Packages` — управляющий файл плюс подписи.
+
+    `extra` — поля, которых в самом пакете нет, а менеджерам они нужны:
+    страница пакета (`Depiction`) и его значок (`Icon`). Поле из пакета,
+    если оно там есть, главнее.
+    """
     control = deb_control(deb_path)
     size, md5, sha1, sha256 = digests(deb_path)
 
     lines = [line for line in control.split("\n") if line.strip()]
+
+    present = set(line.split(":", 1)[0].strip() for line in lines if ":" in line)
+
+    for name, value in (extra or []):
+        if value and name not in present:
+            lines.append("%s: %s" % (name, value))
 
     lines.append("Filename: %s" % filename.replace(os.sep, "/"))
     lines.append("Size: %d" % size)
@@ -194,15 +205,32 @@ def mirror_stable_into_beta():
     return copied
 
 
-def write_indexes(channel):
-    """`Packages` во всех трёх видах и `Release` — для одного канала."""
+def write_indexes(channel, icons=None):
+    """`Packages` во всех видах и `Release` — для одного канала."""
     base = os.path.join(ROOT, channel["path"]) if channel["path"] else ROOT
     debs = os.path.join(base, "debs")
+
+    site = SITE + (channel["path"] + "/" if channel["path"] else "")
 
     entries = []
 
     for name in debs_in(debs):
-        entries.append(entry_for(os.path.join(debs, name), "debs/" + name))
+        path = os.path.join(debs, name)
+
+        package = control_fields(deb_control(path)).get("Package", "")
+
+        """
+        Страница и значок — по адресу, а не путём: так их понимают все
+        три менеджера. Cydia и Zebra показывают страницу пакета по полю
+        `Depiction`, Sileo и Zebra рисуют значок по полю `Icon`; без них
+        пакет у них был безликой строчкой в списке.
+        """
+        extra = [("Depiction", site + "apps/" + package + "/")]
+
+        if icons and package in icons:
+            extra.append(("Icon", site + icons[package]))
+
+        entries.append(entry_for(path, "debs/" + name, extra))
 
     body = ("\n\n".join(entries) + "\n") if entries else ""
     raw = body.encode("utf-8")
@@ -224,6 +252,10 @@ def write_indexes(channel):
 
     with open(os.path.join(base, "Packages.bz2"), "wb") as handle:
         handle.write(bz2.compress(raw))
+
+    # Zebra и Sileo первым делом спрашивают `.xz`; Cydia обходится старыми двумя.
+    with open(os.path.join(base, "Packages.xz"), "wb") as handle:
+        handle.write(lzma.compress(raw, format=lzma.FORMAT_XZ))
 
     release = [
         "Origin: %s" % ORIGIN,
@@ -692,6 +724,8 @@ def app_page_html(package, versions, icon, depth):
         'Открыть в Cydia</a>\n'
         '    <a class="btn plain" href="sileo://package/%s" data-i18n="app_open_sileo">'
         'Открыть в Sileo</a>\n'
+        '    <a class="btn plain" href="zbra://packages/%s" data-i18n="app_open_zebra">'
+        'Открыть в Zebra</a>\n'
         '</p>\n\n'
         '<div class="card">\n'
         '    <h2 data-i18n="app_facts_h">Сведения</h2>\n'
@@ -709,7 +743,7 @@ def app_page_html(package, versions, icon, depth):
         '%s\n'
         '</div>\n'
     ) % (icon, escape(title), escape(newest.get("Description", "")),
-         package, package, facts_rows, olds, ipa_note, author_card(), language_row())
+         package, package, package, facts_rows, olds, ipa_note, author_card(), language_row())
 
     # Заголовок окна не переводится: в нём имя приложения, а его
     # переводить нечем и незачем.
@@ -777,12 +811,13 @@ def main():
         print("Выпусков перенесено в канал испытаний: %d" % copied)
 
     for channel in CHANNELS:
-        count = write_indexes(channel)
-
         base = os.path.join(ROOT, channel["path"]) if channel["path"] else ROOT
 
+        # Сначала значки: на них ссылаются записи `Packages` (поле `Icon`).
         packages = collect(base)
         icons = write_icons(base, packages)
+
+        count = write_indexes(channel, icons)
 
         write_qr(base, SITE + (channel["path"] + "/" if channel["path"] else ""))
 

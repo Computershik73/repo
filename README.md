@@ -1,4 +1,4 @@
-# Источник Computershik73 для Cydia и Sileo
+# Источник Computershik73 для Cydia, Sileo и Zebra
 
 Сюда складываются все мои проекты для iOS. Сейчас в нём **Troubadour** —
 клиент YouTube для iOS 5.1 и новее; следующие появятся здесь же.
