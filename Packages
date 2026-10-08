@@ -15,6 +15,24 @@ MD5sum: b6749ae83b756b4c71e1b52420918308
 SHA1: f4b8ffcbf52a746480f84188a32565c4ff90f041
 SHA256: a7518d5d7bacb68737cd5dc076e6ae205ad2e7b675facba05e4ec351c6dad048
 
+Package: ru.computershik.storeauthfix
+Name: StoreAuthFix
+Description: Чинит вход в App Store и iTunes Store на iOS 8–13: перенаправляет отключённый Apple адрес авторизации MZFinance на новый auth.itunes.apple.com/auth/v1/native. Проверено на iOS 10.3.3 (iPhone 6s) и 10.3.4 (iPhone 5).
+Maintainer: computershik
+Author: computershik
+Homepage: https://t.me/cmplog
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 8.0), firmware (<< 14.0)
+Architecture: iphoneos-arm
+Version: 1.3.1
+Installed-Size: 152
+Depiction: https://computershik73.github.io/repo/apps/ru.computershik.storeauthfix/
+Filename: debs/ru.computershik.storeauthfix_1.3.1_iphoneos-arm.deb
+Size: 6812
+MD5sum: cd0c695fb2874a3ca5b2046b15ebecc1
+SHA1: 7d567747ec154a757e05f3b7d65d5bbd89f313c9
+SHA256: bd3badc939201d04def6bd270e4b7943d7a377eb719878bb8acb3823efbe6be8
+
 Package: ru.computershik.troubadour
 Name: Troubadour
 Description: Клиент YouTube для iOS 5.1 и новее
