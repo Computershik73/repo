@@ -23,15 +23,16 @@ Author: computershik
 Homepage: https://t.me/cmplog
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 8.0), firmware (<< 14.0)
+Recommends: preferenceloader
 Architecture: iphoneos-arm
-Version: 1.3.1
-Installed-Size: 152
+Version: 1.4
+Installed-Size: 312
 Depiction: https://computershik73.github.io/repo/apps/ru.computershik.storeauthfix/
-Filename: debs/ru.computershik.storeauthfix_1.3.1_iphoneos-arm.deb
-Size: 6812
-MD5sum: cd0c695fb2874a3ca5b2046b15ebecc1
-SHA1: 7d567747ec154a757e05f3b7d65d5bbd89f313c9
-SHA256: bd3badc939201d04def6bd270e4b7943d7a377eb719878bb8acb3823efbe6be8
+Filename: debs/ru.computershik.storeauthfix_1.4_iphoneos-arm.deb
+Size: 12024
+MD5sum: 95d24099577268f9782a869204d0e05f
+SHA1: a0fb5b9d478d3756e601a56f62e196a27dc5fc95
+SHA256: 572962e1565341a937bfe9760ff02c556e1c66527f916a3a5927017a9de1e854
 
 Package: ru.computershik.troubadour
 Name: Troubadour
