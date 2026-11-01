@@ -1,7 +1,8 @@
 # Источник Computershik73 для Cydia, Sileo и Zebra
 
 Сюда складываются все мои проекты для iOS. Сейчас в нём **Troubadour** —
-клиент YouTube для iOS 5.1 и новее — и **StoreAuthFix**, твик, который
+клиент YouTube для iOS 5.1 и новее, **Venetium** — браузер на Chromium 150
+для iOS 5–10 (пока в канале испытаний) — и **StoreAuthFix**, твик, который
 возвращает вход в App Store и iTunes Store на iOS 8–13; следующие появятся
 здесь же.
 
@@ -33,5 +34,6 @@ https://computershik73.github.io/repo/beta/
 [Telegram](https://t.me/cmplog) ·
 [поддержать](https://pay.cloudtips.ru/p/83821e32)
 
-Здесь лежат только собранные пакеты. Исходники Troubadour открыты:
-https://github.com/Computershik73/Troubadour
+Здесь лежат только собранные пакеты. Исходники открыты:
+Troubadour — https://github.com/Computershik73/Troubadour,
+Venetium — https://github.com/Computershik73/Venetium-iOS
